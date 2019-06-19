@@ -1,6 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/Bool.h"
-#include "geometry_msgs/PoseStamped.h"
+#include "geometry_msgs/PointStamped.h"
 #include "std_msgs/Float32MultiArray.h"
 #include "geometry_msgs/PoseArray.h"
 #include "std_msgs/Int32.h"
@@ -45,6 +45,7 @@ void addEdge(vector<node> [], node, node);
 void odomCb(const nav_msgs::Odometry&);
 void nEdgesCb(const std_msgs::Int32&);
 void edgeAnglesCb(const std_msgs::Float32MultiArray&);
+void closestNodeCb(const geometry_msgs::PointStamped&);
 bool checkNodeExistence(node&, int&);
 void addNode(node);
 
@@ -55,9 +56,10 @@ int main(int argc, char **argv)
   ros::NodeHandle nh;
 
   //ros::Subscriber junctionSub = nh.subscribe("/X1/node_skeleton/at_a_junction", 5, junctionCb);
-  ros::Subscriber odomSub = nh.subscribe("/X1/odometry", 5, odomCb);
+  //ros::Subscriber odomSub = nh.subscribe("/X1/odometry", 5, odomCb);
   //ros::Subscriber nEdgesSub = nh.subscribe("/X1/node_skeleton/number_of_edges", 5, nEdgesCb);
 	ros::Subscriber edgeAnglesSub = nh.subscribe("/X1/node_skeleton/edge_list", 10, edgeAnglesCb);
+	ros::Subscriber closestNodeSub = nh.subscribe("/X1/node_skeleton/closest_node", 10, closestNodeCb);
  
    // int n = 1000;
     
@@ -158,10 +160,16 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 		//tempNode.unexploredEdgeAngles.push_back();
 
 		int closestNodeId;
-			if(!checkNodeExistence(tempNode, closestNodeId))
+		bool nodeExists = checkNodeExistence(tempNode, closestNodeId);
+			if(!nodeExists)
 			addNode(tempNode);
-			else
+			else if(currentNodeId != closestNodeId)
+			{	
+			currentAdj[currentNodeId].push_back(currentAdj[closestNodeId][0]);
+			currentAdj[closestNodeId].push_back(currentAdj[currentNodeId][0]);
 			currentNodeId = closestNodeId;
+			}
+					
 		}
 
 }
@@ -193,12 +201,19 @@ void junctionCb(const std_msgs::Bool& msg)
 		currentNodeId = closestNodeId;
 	}
 }
-*/
+
 
 void odomCb(const nav_msgs::Odometry& msg)
 {
 currentPosition.x = msg.pose.pose.position.x;
 currentPosition.y = msg.pose.pose.position.y;
+}
+*/
+
+void closestNodeCb(const geometry_msgs::PointStamped& msg)
+{
+currentPosition.x = msg.point.x;
+currentPosition.y = msg.point.y;
 }
 
 void addNode(node tempNode)
