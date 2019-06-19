@@ -41,7 +41,7 @@ vector<float> currentEdgeAngles;
 bool updatePlot = false;
 
 void addEdge(vector<node> [], node, node);
-void junctionCb(const std_msgs::Bool&);
+//void junctionCb(const std_msgs::Bool&);
 void odomCb(const nav_msgs::Odometry&);
 void nEdgesCb(const std_msgs::Int32&);
 void edgeAnglesCb(const std_msgs::Float32MultiArray&);
@@ -54,10 +54,10 @@ int main(int argc, char **argv)
 
   ros::NodeHandle nh;
 
-  ros::Subscriber junctionSub = nh.subscribe("/X1/node_skeleton/at_a_junction", 5, junctionCb);
+  //ros::Subscriber junctionSub = nh.subscribe("/X1/node_skeleton/at_a_junction", 5, junctionCb);
   ros::Subscriber odomSub = nh.subscribe("/X1/odometry", 5, odomCb);
-  ros::Subscriber nEdgesSub = nh.subscribe("/X1/node_skeleton/number_of_edges", 5, nEdgesCb);
-	//ros::Subscriber edgeAnglesSub = nh.subscribe("/X1/node_skeleton/edge_list", 10, edgeAnglesCb);
+  //ros::Subscriber nEdgesSub = nh.subscribe("/X1/node_skeleton/number_of_edges", 5, nEdgesCb);
+	ros::Subscriber edgeAnglesSub = nh.subscribe("/X1/node_skeleton/edge_list", 10, edgeAnglesCb);
  
    // int n = 1000;
     
@@ -84,45 +84,49 @@ ros::spinOnce();
    }
 */	   
 
+	std::vector<double> xt(2), yt(2);
+
 	while(1)
 	{
-		plt::clf();
-		for (int i = 0; i < currentNNodes; i++)
-		{
-			for (int j = 0; j < currentAdj[i].size(); j++)
+		//plt::clf();
+			if(currentNNodes > 0)
 			{
-			std::vector<double> xt(2), yt(2);
-			//xt.push_back(currentAdj[currentNNodes][0].position.x);
-			//yt.push_back(currentAdj[currentNNodes][0].position.y);
-			xt[0] = currentAdj[i][0].position.x;
-			xt[1] = currentAdj[i][j].position.x;
+				if(updatePlot)
+				{
+					for (int j = 0; j < currentAdj[currentNNodes-1].size(); j++)
+					{
+					//std::vector<double> xt(2), yt(2);
+					//xt.push_back(currentAdj[currentNNodes][0].position.x);
+					//yt.push_back(currentAdj[currentNNodes][0].position.y);
+						
+						xt[0] = currentAdj[currentNNodes-1][0].position.x;
+						xt[1] = currentAdj[currentNNodes-1][j].position.x;
 
-			yt[0] = currentAdj[i][0].position.y;
-			yt[1] = currentAdj[i][j].position.y;
+						yt[0] = currentAdj[currentNNodes-1][0].position.y;
+						yt[1] = currentAdj[currentNNodes-1][j].position.y;
 
-			//xt.push_back(currentAdj[i][0].position.x);
-			//yt.push_back(currentAdj[i][0].position.y);
+						//xt.push_back(currentAdj[i][0].position.x);
+						//yt.push_back(currentAdj[i][0].position.y);
 
-			//cout << xt.at(0) << " , " << yt.at(0) << endl; 
+						//cout << xt.at(0) << " , " << yt.at(0) << endl; 
 
-			//plt::scatter(xt, yt, 15);
-			plt::plot(xt,yt);
-			plt::xlim(0, 200);
-			plt::ylim(-200, 200);
+						//plt::scatter(xt, yt, 15);
+						plt::plot(xt,yt);
+						plt::xlim(0, 100);
+						plt::ylim(-150, 150);
+						plt::pause(0.1);
+					}
+				updatePlot = false;
+				}
+				xt[0] = currentAdj[currentNNodes-1][0].position.x;
+				yt[0] = currentAdj[currentNNodes-1][0].position.y;
+				xt[1] = currentAdj[currentNNodes-1][0].position.x;
+				yt[1] = currentAdj[currentNNodes-1][0].position.y;
 
-			xt[0] = currentAdj[i][0].position.x;
-			yt[0] = currentAdj[i][0].position.y;
-			xt[1] = currentAdj[i][0].position.x;
-			yt[1] = currentAdj[i][0].position.y;
+				plt::scatter(xt, yt, 15);
 
-			plt::scatter(xt, yt, 15);
-
-			plt::pause(0.1);
-
-			updatePlot = false;
+				plt::pause(0.1);
 			}
-	}
-
   ros::spinOnce();
 	}
   return 0;
@@ -130,18 +134,39 @@ ros::spinOnce();
 
 void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 {
-	cout << "Here" << endl;
+	cout << endl;
+	
+	ROS_INFO("Edge Angles Callback Called");
+
 	currentEdgeAngles.clear();
 
-	try{
+	currentNEdges = msg.layout.dim[0].size;
+
 	 for(int i = 0; i < currentNEdges; i++)
 	 currentEdgeAngles.push_back(msg.data[i]);
-	}
-	catch(std::exception& e){
-		cout << "Exception Caught" << endl;
-	}
+	
+	bool at_a_junction = msg.layout.dim[0].size > 2;
+	
+	cout << "currentNEdges = " << currentNEdges << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes <<endl;
+
+		if (at_a_junction)
+		{
+		cout << "Junction Detected at " << "(" <<  currentPosition.x <<  "," << currentPosition.y  << ")" << endl;
+		node tempNode;
+		tempNode.position= currentPosition;
+		tempNode.nEdges = currentNEdges;
+		//tempNode.unexploredEdgeAngles.push_back();
+
+		int closestNodeId;
+			if(!checkNodeExistence(tempNode, closestNodeId))
+			addNode(tempNode);
+			else
+			currentNodeId = closestNodeId;
+		}
+
 }
 
+/*
 void nEdgesCb(const std_msgs::Int32& msg)
 {
 currentNEdges = msg.data;
@@ -168,6 +193,7 @@ void junctionCb(const std_msgs::Bool& msg)
 		currentNodeId = closestNodeId;
 	}
 }
+*/
 
 void odomCb(const nav_msgs::Odometry& msg)
 {
