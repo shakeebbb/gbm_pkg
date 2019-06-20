@@ -6,6 +6,7 @@
 #include "std_msgs/Int32.h"
 #include "nav_msgs/Odometry.h"
 #include "cmath"
+#include "tf/transform_datatypes.h"
 #include "../../matplotlib-cpp/matplotlibcpp.h"
 
 using namespace std; 
@@ -32,6 +33,7 @@ int nEdges;
 };
 
 point currentPosition;
+float currentHeading;
 int currentNEdges = 0;
 int currentNNodes = 0;
 int currentNodeId = -1;
@@ -168,10 +170,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			currentAdj[currentNodeId].push_back(currentAdj[closestNodeId][0]);
 			currentAdj[closestNodeId].push_back(currentAdj[currentNodeId][0]);
 			currentNodeId = closestNodeId;
-			}
-					
+			}		
 		}
-
 }
 
 /*
@@ -201,14 +201,30 @@ void junctionCb(const std_msgs::Bool& msg)
 		currentNodeId = closestNodeId;
 	}
 }
-
+*/
 
 void odomCb(const nav_msgs::Odometry& msg)
 {
-currentPosition.x = msg.pose.pose.position.x;
-currentPosition.y = msg.pose.pose.position.y;
+static double dy = 0; 
+static int count = 0;
+
+tf::Quaternion q(msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w);
+tf::Matrix3x3 m(q);
+
+double r,p,y;
+m.getRPY(r, p, y);
+
+dy = dy - y;
+count = count+1;
+
+	if(count == 10)
+	{
+	count = 0;
+	dy = 0;
+	}
+
+currentHeading = yaw;
 }
-*/
 
 void closestNodeCb(const geometry_msgs::PointStamped& msg)
 {
