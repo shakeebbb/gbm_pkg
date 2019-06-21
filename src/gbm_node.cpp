@@ -40,7 +40,7 @@ int currentNodeId = -1;
 float sRadius = 10;
 vector<vector<node> > currentAdj;
 vector<float> currentEdgeAngles;
-bool updatePlot = false;
+vector<int> updateNodeIds;
 float pi = 3.14159;
 
 void addEdge(vector<node> [], node, node);
@@ -89,39 +89,54 @@ ros::spinOnce();
    }
 */	   
 
-	std::vector<double> xt(2), yt(2);
+	vector<float> xt, yt;
+	vector<float> ut, vt;
 
 	while(1)
 	{
 		//plt::clf();
 			if(currentNNodes > 0)
 			{
-				if(updatePlot)
+				if(!updateNodeIds.empty())
 				{
-					for (int j = 0; j < currentAdj[currentNNodes-1].size(); j++)
+					for (int i = 0; i < updateNodeIds.size(); i++)
 					{
-					//std::vector<double> xt(2), yt(2);
-					//xt.push_back(currentAdj[currentNNodes][0].position.x);
-					//yt.push_back(currentAdj[currentNNodes][0].position.y);
-						
-						xt[0] = currentAdj[currentNNodes-1][0].position.x;
-						xt[1] = currentAdj[currentNNodes-1][j].position.x;
+						for (int j = 0; j < currentAdj[i].size(); j++)
+						{
+						//std::vector<double> xt(2), yt(2);
+						//xt.push_back(currentAdj[currentNNodes][0].position.x);
+						//yt.push_back(currentAdj[currentNNodes][0].position.y);
+							
+							xt.clear(); yt.clear();
+							ut.clear(); vt.clear();
 
-						yt[0] = currentAdj[currentNNodes-1][0].position.y;
-						yt[1] = currentAdj[currentNNodes-1][j].position.y;
+							xt.push_back(currentAdj[i][0].position.x);
+							yt.push_back(currentAdj[i][0].position.y);
+							
+							ut.push_back(cos(currentAdj[i][0].exploredEdgeAngles[j]));
+							vt.push_back(sin(currentAdj[i][0].exploredEdgeAngles[j]));
 
-						//xt.push_back(currentAdj[i][0].position.x);
-						//yt.push_back(currentAdj[i][0].position.y);
+							cout << xt.size() << " " << ut.size() << endl;
 
-						//cout << xt.at(0) << " , " << yt.at(0) << endl; 
+							plt::quiver(xt,yt,ut,vt);
 
-						//plt::scatter(xt, yt, 15);
-						plt::plot(xt,yt);
-						plt::xlim(0, 100);
-						plt::ylim(-150, 150);
-						plt::pause(0.1);
+							xt.push_back(currentAdj[i][j].position.x);
+							yt.push_back(currentAdj[i][j].position.y);
+
+							//xt.push_back(currentAdj[i][0].position.x);
+							//yt.push_back(currentAdj[i][0].position.y);
+
+							//cout << xt.at(0) << " , " << yt.at(0) << endl; 
+
+							//plt::scatter(xt, yt, 15);
+							plt::plot(xt,yt);
+							
+							plt::xlim(0, 100);
+							plt::ylim(-150, 150);
+							plt::pause(0.1);
+						}
 					}
-				updatePlot = false;
+				updateNodeIds.clear();
 				}
 				xt[0] = currentAdj[currentNNodes-1][0].position.x;
 				yt[0] = currentAdj[currentNNodes-1][0].position.y;
@@ -176,13 +191,19 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 		int closestNodeId;
 		bool nodeExists = checkNodeExistence(tempNode, closestNodeId);
 			if(!nodeExists)
+			{
 			addNode(tempNode);
+			updateNodeIds.push_back(currentNNodes-1);
+			}
 			else if(currentNodeId != closestNodeId)
 			{	
 			currentAdj[currentNodeId].push_back(currentAdj[closestNodeId][0]);
 			currentAdj[closestNodeId][0].exploredEdgeAngles.push_back((currentHeading > 0) ? (currentHeading-pi) : (currentHeading+pi));
 			currentAdj[closestNodeId].push_back(currentAdj[currentNodeId][0]);
 			currentNodeId = closestNodeId;
+
+			updateNodeIds.push_back(currentNodeId);
+			updateNodeIds.push_back(closestNodeId);
 			}		
 		}
 
@@ -279,7 +300,6 @@ currentNodeId = currentNNodes;
 currentNNodes += 1;
 
 cout << "Node Added" << endl;
-updatePlot = true;
 }
 
 void addEdge(node u, node v) 
