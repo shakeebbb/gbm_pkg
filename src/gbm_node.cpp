@@ -34,13 +34,14 @@ int nEdges;
 
 point currentPosition;
 float currentHeading;
-int currentNEdges = 0;
+//int currentNEdges = 0;
 int currentNNodes = 0;
 int currentNodeId = -1;
 float sRadius = 10;
 vector<vector<node> > currentAdj;
 vector<float> currentEdgeAngles;
 bool updatePlot = false;
+float pi = 3.14159;
 
 void addEdge(vector<node> [], node, node);
 //void junctionCb(const std_msgs::Bool&);
@@ -138,27 +139,38 @@ ros::spinOnce();
 
 void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 {
+	// When the robot leaves a node with ID currentNodeId, the heading is saved in the exploredEdgeAngles
+	static int nEdges = msg.layout.dim[0].size;
+
+		if(nEdges > msg.layout.dim[0].size && msg.layout.dim[0].size < 3)
+		currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentHeading);
+
+	nEdges = msg.layout.dim[0].size;
+
+	 // When a new node is found along the edge it is added corresponding to the exploredEdgeAngles last value already saved
 	cout << endl;
 	
 	ROS_INFO("Edge Angles Callback Called");
 
 	currentEdgeAngles.clear();
 
-	currentNEdges = msg.layout.dim[0].size;
+	//currentNEdges = msg.layout.dim[0].size;
 
-	 for(int i = 0; i < currentNEdges; i++)
+	 for(int i = 0; i < msg.layout.dim[0].size; i++)
 	 currentEdgeAngles.push_back(msg.data[i]);
 	
 	bool at_a_junction = msg.layout.dim[0].size > 2;
 	
-	cout << "currentNEdges = " << currentNEdges << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes <<endl;
+	cout << "Edges Array Size = " << msg.layout.dim[0].size << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes <<endl;
 
 		if (at_a_junction)
 		{
 		cout << "Junction Detected at " << "(" <<  currentPosition.x <<  "," << currentPosition.y  << ")" << endl;
 		node tempNode;
 		tempNode.position= currentPosition;
-		tempNode.nEdges = currentNEdges;
+		tempNode.nEdges = msg.layout.dim[0].size ;
+
+		tempNode.exploredEdgeAngles.push_back((currentHeading > 0) ? (currentHeading-pi) : (currentHeading+pi));
 		//tempNode.unexploredEdgeAngles.push_back();
 
 		int closestNodeId;
@@ -168,10 +180,29 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			else if(currentNodeId != closestNodeId)
 			{	
 			currentAdj[currentNodeId].push_back(currentAdj[closestNodeId][0]);
+			currentAdj[closestNodeId][0].exploredEdgeAngles.push_back((currentHeading > 0) ? (currentHeading-pi) : (currentHeading+pi));
 			currentAdj[closestNodeId].push_back(currentAdj[currentNodeId][0]);
 			currentNodeId = closestNodeId;
 			}		
 		}
+
+		///////////////////////////
+		/*
+		int arraySize = 10;
+
+		static int nEdgesHistory[arraySize];
+		static int estimatedNEdges = 0;
+
+		for (int i = 0; i < arraySize; i++)
+		nEdgesHistory[i] = nEdgesHistory[i+1]; 
+
+		if(max(nEdgesHistory) > estimatedNEdges)
+		exitAngle = currentHeading;
+		else if(max(nEdgesHistory) < estimatedNEdges)
+		entryAngle = currentHeading;
+
+		estimatedNEdges = max(nEdgesHistory);
+		*/
 }
 
 /*
@@ -205,8 +236,6 @@ void junctionCb(const std_msgs::Bool& msg)
 
 void odomCb(const nav_msgs::Odometry& msg)
 {
-static double dy = 0; 
-static int count = 0;
 
 tf::Quaternion q(msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w);
 tf::Matrix3x3 m(q);
@@ -214,16 +243,19 @@ tf::Matrix3x3 m(q);
 double r,p,y;
 m.getRPY(r, p, y);
 
-dy = dy - y;
-count = count+1;
+/*
+static float yp[50] = {y,y,y,y,y,y,y,y,y,y};  
+	
+	yp[49] = y;
 
-	if(count == 10)
+	float dy = 0;
+	for (int i = 0; i < 49; i++)
 	{
-	count = 0;
-	dy = 0;
+		dy = dy + (y - yp[i]);
+		yp[i] = yp[i+1];
 	}
-
-currentHeading = yaw;
+*/
+currentHeading = y;
 }
 
 void closestNodeCb(const geometry_msgs::PointStamped& msg)
