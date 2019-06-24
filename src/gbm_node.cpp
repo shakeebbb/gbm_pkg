@@ -49,6 +49,7 @@ void nEdgesCb(const std_msgs::Int32&);
 void edgeAnglesCb(const std_msgs::Float32MultiArray&);
 void closestNodeCb(const geometry_msgs::PointStamped&);
 bool checkNodeExistence(node&, int&);
+float distance(node&, node&);
 void addNode(node);
 
 int main(int argc, char **argv)
@@ -138,11 +139,11 @@ ros::spinOnce();
 							plt::pause(0.1);
 							//}
 						}
-						cout << "Here" << endl;
+
 						cout << "currentAdj[i][0].exploredEdgeAngles.size() : " << currentAdj[i][0].exploredEdgeAngles.size() << endl;
 						for (int j = 0; j < currentAdj[i][0].exploredEdgeAngles.size(); j++)
 						{
-						/*
+						
 						xt.clear(); yt.clear();
 						ut.clear(); vt.clear();
 							
@@ -154,7 +155,7 @@ ros::spinOnce();
 
 						plt::quiver(xt,yt,ut,vt);
 						plt::pause(0.1);
-						*/
+						
 						}
 					}
 				updateNodeIds.clear();
@@ -176,19 +177,19 @@ ros::spinOnce();
 void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 {
 	// When the robot leaves a node with ID currentNodeId, the heading is saved in the exploredEdgeAngles
-	static int nEdges = msg.layout.dim[0].size;
+	//static int nEdges = msg.layout.dim[0].size;
 	//static float angleLeft = 0;
-	static bool updateAngleLeft = true;
+	static bool updateAngleLeft = false;
 
-		if(nEdges > msg.layout.dim[0].size && msg.layout.dim[0].size < 3 && updateAngleLeft)
-		{
+		//if()
+		//{
 		//currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentHeading);
 		//updateNodeIds.push_back(currentNodeId);
 		
-		updateAngleLeft = false;
-		}
+		//updateAngleLeft = false;
+		//}
 
-	nEdges = msg.layout.dim[0].size;
+	//nEdges = msg.layout.dim[0].size;
 
 	 // When a new node is found along the edge it is added corresponding to the exploredEdgeAngles last value already saved
 	cout << endl;
@@ -204,16 +205,17 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 	
 	bool at_a_junction = msg.layout.dim[0].size > 2;
 	
-	cout << "Edges Array Size = " << msg.layout.dim[0].size << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes << "currentNodeId = "<< currentNodeId << endl;
+	cout << "Edges Array Size = " << msg.layout.dim[0].size << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes << " currentNodeId = "<< currentNodeId 
+			 << " updateAngleLeft = " << updateAngleLeft << endl;
 
-		if (at_a_junction)
-		{
-		updateAngleLeft = true;
-		
-		cout << "Junction Detected at " << "(" <<  currentPosition.x <<  "," << currentPosition.y  << ")" << endl;
 		node tempNode;
 		tempNode.position= currentPosition;
 		tempNode.nEdges = msg.layout.dim[0].size ;
+		
+		if (at_a_junction)
+		{
+		
+		cout << "Junction Detected at " << "(" <<  currentPosition.x <<  "," << currentPosition.y  << ")" << endl;
 
 		tempNode.exploredEdgeAngles.push_back((currentHeading > 0) ? (currentHeading-pi) : (currentHeading+pi));
 
@@ -223,6 +225,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			{
 			addNode(tempNode);
 			updateNodeIds.push_back(currentNNodes-1);
+			
+			updateAngleLeft = true;
 			}
 			else if(currentNodeId != closestNodeId)
 			{	
@@ -234,7 +238,21 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			updateNodeIds.push_back(currentNodeId);
 			
 			currentNodeId = closestNodeId;
+			
+			updateAngleLeft = true;
 			}		
+		}
+		
+		if (!at_a_junction && updateAngleLeft && distance(currentAdj[currentNodeId][0], tempNode) > sRadius)
+		{
+		cout << "currentAdj[currentNodeId][0].position = (" << currentAdj[currentNodeId][0].position.x << "," << currentAdj[currentNodeId][0].position.y << ")" << endl;
+		cout << "tempNode.position = (" << tempNode.position.x << "," << tempNode.position.y << ")" << endl;
+		cout << "distance(currentAdj[currentNodeId][0], tempNode) = " << distance(currentAdj[currentNodeId][0], tempNode) << endl;
+		
+		currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentHeading);
+		updateNodeIds.push_back(currentNodeId);
+		
+		updateAngleLeft = false;
 		}
 
 		///////////////////////////
@@ -342,16 +360,25 @@ bool checkNodeExistence(node& tempNode, int& closestNodeId)
 {
 	for (int i=0; i<currentNNodes; i++)
 	{
-		float d = pow(currentAdj[i][0].position.x - tempNode.position.x, 2) + pow(currentAdj[i][0].position.y - tempNode.position.y, 2);
+		//float d = pow(currentAdj[i][0].position.x - tempNode.position.x, 2) + pow(currentAdj[i][0].position.y - tempNode.position.y, 2);
 
-	 //if(d < pow(sRadius, 2) && (currentAdj[i][0].nEdges == tempNode.nEdges)
-	if(d < pow(sRadius, 2))
+	 float d = distance(currentAdj[i][0], tempNode);
+	 
+	if(d < sRadius)
 		{
-		 cout << "Distance to closest node = " << sqrt(d) << endl;
+		 cout << "Distance to closest node = " << d << endl;
 		 closestNodeId = i;
 		 return true;
 		}
 	}
 	return false;
 }
+
+float distance(node& node1, node& node2)
+{
+float distance = pow(node1.position.x - node2.position.x, 2) + pow(node1.position.y - node2.position.y, 2);
+return sqrt(distance);
+}
+
+
 
