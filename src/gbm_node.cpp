@@ -12,7 +12,6 @@
 using namespace std; 
 namespace plt = matplotlibcpp;
 
-
 class point
 {
 public:
@@ -59,7 +58,7 @@ int main(int argc, char **argv)
   ros::NodeHandle nh;
 
   //ros::Subscriber junctionSub = nh.subscribe("/X1/node_skeleton/at_a_junction", 5, junctionCb);
-  //ros::Subscriber odomSub = nh.subscribe("/X1/odometry", 5, odomCb);
+  ros::Subscriber odomSub = nh.subscribe("/X1/odometry", 5, odomCb);
   //ros::Subscriber nEdgesSub = nh.subscribe("/X1/node_skeleton/number_of_edges", 5, nEdgesCb);
 	ros::Subscriber edgeAnglesSub = nh.subscribe("/X1/node_skeleton/edge_list", 10, edgeAnglesCb);
 	ros::Subscriber closestNodeSub = nh.subscribe("/X1/node_skeleton/closest_node", 10, closestNodeCb);
@@ -99,41 +98,63 @@ ros::spinOnce();
 			{
 				if(!updateNodeIds.empty())
 				{
-					for (int i = 0; i < updateNodeIds.size(); i++)
+					for (int k = 0; k < updateNodeIds.size(); k++)
 					{
+						int i = updateNodeIds[k];
+						
+						cout << "currentAdj[i].size() : " << currentAdj[i].size() << endl;
+						
 						for (int j = 0; j < currentAdj[i].size(); j++)
 						{
+							
 						//std::vector<double> xt(2), yt(2);
 						//xt.push_back(currentAdj[currentNNodes][0].position.x);
 						//yt.push_back(currentAdj[currentNNodes][0].position.y);
 							
+							//if (j != 0)
+							//{
 							xt.clear(); yt.clear();
-							ut.clear(); vt.clear();
 
 							xt.push_back(currentAdj[i][0].position.x);
 							yt.push_back(currentAdj[i][0].position.y);
-							
-							ut.push_back(cos(currentAdj[i][0].exploredEdgeAngles[j]));
-							vt.push_back(sin(currentAdj[i][0].exploredEdgeAngles[j]));
-
-							cout << xt.size() << " " << ut.size() << endl;
-
-							plt::quiver(xt,yt,ut,vt);
 
 							xt.push_back(currentAdj[i][j].position.x);
 							yt.push_back(currentAdj[i][j].position.y);
-
+							
 							//xt.push_back(currentAdj[i][0].position.x);
 							//yt.push_back(currentAdj[i][0].position.y);
 
 							//cout << xt.at(0) << " , " << yt.at(0) << endl; 
 
 							//plt::scatter(xt, yt, 15);
+							cout << xt[0] << "," << yt[0] << endl;
+							cout << xt[1] << "," << yt[1] << endl;
+
+							cout << "Updating Node Id : " << i << endl;
 							plt::plot(xt,yt);
 							
 							plt::xlim(0, 100);
 							plt::ylim(-150, 150);
 							plt::pause(0.1);
+							//}
+						}
+						cout << "Here" << endl;
+						cout << "currentAdj[i][0].exploredEdgeAngles.size() : " << currentAdj[i][0].exploredEdgeAngles.size() << endl;
+						for (int j = 0; j < currentAdj[i][0].exploredEdgeAngles.size(); j++)
+						{
+						/*
+						xt.clear(); yt.clear();
+						ut.clear(); vt.clear();
+							
+						xt.push_back(currentAdj[i][0].position.x);
+						yt.push_back(currentAdj[i][0].position.y);
+							
+						ut.push_back(cos(currentAdj[i][0].exploredEdgeAngles[j]));
+						vt.push_back(sin(currentAdj[i][0].exploredEdgeAngles[j]));
+
+						plt::quiver(xt,yt,ut,vt);
+						plt::pause(0.1);
+						*/
 						}
 					}
 				updateNodeIds.clear();
@@ -156,9 +177,16 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 {
 	// When the robot leaves a node with ID currentNodeId, the heading is saved in the exploredEdgeAngles
 	static int nEdges = msg.layout.dim[0].size;
+	//static float angleLeft = 0;
+	static bool updateAngleLeft = true;
 
-		if(nEdges > msg.layout.dim[0].size && msg.layout.dim[0].size < 3)
-		currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentHeading);
+		if(nEdges > msg.layout.dim[0].size && msg.layout.dim[0].size < 3 && updateAngleLeft)
+		{
+		//currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentHeading);
+		//updateNodeIds.push_back(currentNodeId);
+		
+		updateAngleLeft = false;
+		}
 
 	nEdges = msg.layout.dim[0].size;
 
@@ -176,17 +204,18 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 	
 	bool at_a_junction = msg.layout.dim[0].size > 2;
 	
-	cout << "Edges Array Size = " << msg.layout.dim[0].size << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes <<endl;
+	cout << "Edges Array Size = " << msg.layout.dim[0].size << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes << "currentNodeId = "<< currentNodeId << endl;
 
 		if (at_a_junction)
 		{
+		updateAngleLeft = true;
+		
 		cout << "Junction Detected at " << "(" <<  currentPosition.x <<  "," << currentPosition.y  << ")" << endl;
 		node tempNode;
 		tempNode.position= currentPosition;
 		tempNode.nEdges = msg.layout.dim[0].size ;
 
 		tempNode.exploredEdgeAngles.push_back((currentHeading > 0) ? (currentHeading-pi) : (currentHeading+pi));
-		//tempNode.unexploredEdgeAngles.push_back();
 
 		int closestNodeId;
 		bool nodeExists = checkNodeExistence(tempNode, closestNodeId);
@@ -200,10 +229,11 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			currentAdj[currentNodeId].push_back(currentAdj[closestNodeId][0]);
 			currentAdj[closestNodeId][0].exploredEdgeAngles.push_back((currentHeading > 0) ? (currentHeading-pi) : (currentHeading+pi));
 			currentAdj[closestNodeId].push_back(currentAdj[currentNodeId][0]);
-			currentNodeId = closestNodeId;
 
-			updateNodeIds.push_back(currentNodeId);
 			updateNodeIds.push_back(closestNodeId);
+			updateNodeIds.push_back(currentNodeId);
+			
+			currentNodeId = closestNodeId;
 			}		
 		}
 
