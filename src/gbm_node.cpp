@@ -29,10 +29,12 @@ point position;
 vector<float> exploredEdgeAngles; // Angles to the children or angle from the parent
 vector<float> unexploredEdgeAngles; // Unexplored angles for parent
 int nEdges;
+float cost2reach;
 };
 
-point currentPosition;
-float currentHeading;
+point currentPosition; // Closest Future Node position
+point currentLocation; // Current Position of the robot
+float currentHeading; // Current Heading of the robot
 //int currentNEdges = 0;
 int currentNNodes = 0;
 int currentNodeId = -1;
@@ -51,6 +53,7 @@ void closestNodeCb(const geometry_msgs::PointStamped&);
 bool checkNodeExistence(node&, int&);
 float distance(node&, node&);
 void addNode(node);
+void printAdj();
 
 int main(int argc, char **argv)
 {
@@ -99,6 +102,7 @@ ros::spinOnce();
 			{
 				if(!updateNodeIds.empty())
 				{
+				printAdj();
 					for (int k = 0; k < updateNodeIds.size(); k++)
 					{
 						int i = updateNodeIds[k];
@@ -230,10 +234,14 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			}
 			else if(currentNodeId != closestNodeId)
 			{	
+			currentAdj[closestNodeId][0].cost2reach = distance(currentAdj[closestNodeId][0], currentAdj[currentNodeId][0]);
 			currentAdj[currentNodeId].push_back(currentAdj[closestNodeId][0]);
+			
 			currentAdj[closestNodeId][0].exploredEdgeAngles.push_back((currentHeading > 0) ? (currentHeading-pi) : (currentHeading+pi));
+			
+			currentAdj[currentNodeId][0].cost2reach = distance(currentAdj[currentNodeId][0], currentAdj[closestNodeId][0]);
 			currentAdj[closestNodeId].push_back(currentAdj[currentNodeId][0]);
-
+			
 			updateNodeIds.push_back(closestNodeId);
 			updateNodeIds.push_back(currentNodeId);
 			
@@ -243,7 +251,10 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			}		
 		}
 		
-		if (!at_a_junction && updateAngleLeft && distance(currentAdj[currentNodeId][0], tempNode) > sRadius)
+		cout << "updateAngleLeft = " << updateAngleLeft << endl;
+		
+		tempNode.position = currentLocation;
+		if (currentNodeId > -1 && distance(currentAdj[currentNodeId][0], tempNode) > sRadius && updateAngleLeft) // && distance(currentAdj[currentNodeId][0], tempNode) > sRadius)
 		{
 		cout << "currentAdj[currentNodeId][0].position = (" << currentAdj[currentNodeId][0].position.x << "," << currentAdj[currentNodeId][0].position.y << ")" << endl;
 		cout << "tempNode.position = (" << tempNode.position.x << "," << tempNode.position.y << ")" << endl;
@@ -325,6 +336,8 @@ static float yp[50] = {y,y,y,y,y,y,y,y,y,y};
 	}
 */
 currentHeading = y;
+currentLocation.x = msg.pose.pose.position.x;
+currentLocation.y = msg.pose.pose.position.y;
 }
 
 void closestNodeCb(const geometry_msgs::PointStamped& msg)
@@ -339,7 +352,10 @@ vector<node> tempVector;
 tempVector.push_back(tempNode);
 	if(currentNodeId > -1)
 	{
+	currentAdj[currentNodeId][0].cost2reach = distance(currentAdj[currentNodeId][0], tempNode);
 	tempVector.push_back(currentAdj[currentNodeId][0]);
+	
+	tempNode.cost2reach = distance(currentAdj[currentNodeId][0], tempNode);
 	currentAdj[currentNodeId].push_back(tempNode);
 	}
 currentAdj.push_back(tempVector);
@@ -358,19 +374,33 @@ currentAdj[v.id].push_back(u);
 
 bool checkNodeExistence(node& tempNode, int& closestNodeId)
 {
+	float d = sRadius;
+	
 	for (int i=0; i<currentNNodes; i++)
 	{
 		//float d = pow(currentAdj[i][0].position.x - tempNode.position.x, 2) + pow(currentAdj[i][0].position.y - tempNode.position.y, 2);
 
-	 float d = distance(currentAdj[i][0], tempNode);
+	 //d = min(d, distance(currentAdj[i][0], tempNode));
 	 
+	 if(distance(currentAdj[i][0], tempNode) < d)
+	 {
+	 closestNodeId = i;
+	 d = distance(currentAdj[i][0], tempNode);
+	 }
+
+	 /*
 	if(d < sRadius)
 		{
 		 cout << "Distance to closest node = " << d << endl;
 		 closestNodeId = i;
 		 return true;
 		}
+		*/
 	}
+	
+	if (d < sRadius)
+	return true;
+	else
 	return false;
 }
 
@@ -379,6 +409,39 @@ float distance(node& node1, node& node2)
 float distance = pow(node1.position.x - node2.position.x, 2) + pow(node1.position.y - node2.position.y, 2);
 return sqrt(distance);
 }
+
+void printAdj()
+{
+
+cout << "------------------------------------------------------" << endl;
+
+	for (int i = 0; i < currentNNodes; i++)
+	{
+	cout << "| (" << currentAdj[i][0].position.x << " , " << currentAdj[i][0].position.y << ") |";
+	
+		for (int j = 1; j < currentAdj[i].size(); j++)
+		cout << " (" << currentAdj[i][j].position.x << " , " << currentAdj[i][j].position.y << ") |";
+		
+	cout << endl;
+	
+	cout << "| (";
+	
+		for (int j = 0; j < currentAdj[i][0].exploredEdgeAngles.size(); j++)
+		cout << currentAdj[i][0].exploredEdgeAngles[j] << ", ";
+	
+	cout << ") |";
+	
+		for (int j = 1; j < currentAdj[i].size(); j++)
+		cout << " (" << currentAdj[i][j].cost2reach << ") |";
+		
+	cout << endl << endl;
+	
+	}
+	
+cout << endl << "---------------------------------------------------------" << endl;
+}
+
+
 
 
 
