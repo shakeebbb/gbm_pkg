@@ -2,3 +2,4 @@
   <node name="gbm_node" pkg="gbm_pkg" type="gbm_node"  output="screen"/>
   <node pkg="rosbag" type="play" name="bag_player" args="$(env HOME)/gbm_ws/bags/node_skeleton_data_2019-06-18-15-49-05.bag"/>
 </launch>
+
