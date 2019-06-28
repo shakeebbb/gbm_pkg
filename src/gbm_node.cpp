@@ -38,7 +38,7 @@ float currentHeading; // Current Heading of the robot
 //int currentNEdges = 0;
 int currentNNodes = 0;
 int currentNodeId = -1;
-float sRadius = 10;
+float sRadius = 3;
 float eRadius = 0.7;
 vector<vector<node> > currentAdj;
 vector<float> currentEdgeAngles;
@@ -51,7 +51,7 @@ void odomCb(const nav_msgs::Odometry&);
 void nEdgesCb(const std_msgs::Int32&);
 void edgeAnglesCb(const std_msgs::Float32MultiArray&);
 void closestNodeCb(const geometry_msgs::PointStamped&);
-void pruneEdgeIfRedundant(int, int, float);
+void updateUnexploredEdgeAngles(int, bool, vector<float>);
 bool checkLastEdgeExistence(int);
 bool checkNodeExistence(node&, int&);
 float distance(node&, node&);
@@ -241,8 +241,11 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 				//}
 			if(currentNNodes > 0) updateNodeIds.push_back(currentNNodes-1);
 			addNode(tempNode);
+			
+			updateUnexploredEdgeAngles(currentNNodes-1, false, msg.data);
+			
 			updateNodeIds.push_back(currentNNodes-1);
-
+			
 			updateAngleLeft = true;
 			}
 			else if(currentNodeId != closestNodeId && !checkLastEdgeExistence(currentNodeId))
@@ -258,6 +261,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			
 			//pruneEdgeIfRedundant(closestNodeId, currentNodeId, currentAdj[closestNodeId][0].exploredEdgeAngles.back());
 			//pruneEdgeIfRedundant(currentNodeId, closestNodeId, currentAdj[currentNodeId][0].exploredEdgeAngles.back());
+			
+			updateUnexploredEdgeAngles(closestNodeId, false, msg.data);
 			
 			updateNodeIds.push_back(closestNodeId);
 			updateNodeIds.push_back(currentNodeId);
@@ -288,6 +293,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 		
 		currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentHeading);
 		//updateNodeIds.push_back(currentNodeId);
+		
+		updateUnexploredEdgeAngles(currentNodeId, true, {});
 		
 		updateAngleLeft = false;
 		}
@@ -433,18 +440,47 @@ bool checkNodeExistence(node& tempNode, int& closestNodeId)
 	return false;
 }
 
-void pruneEdgeIfRedundant(int node1Id, int node2Id, float exploredEdgeAngle)
+void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEdgeAngles)
 {
-
-	for (int i = 0; i < currentAdj[node1Id][0].exploredEdgeAngles.size(); i++)
+	bool edgeExists = false;
+	
+	if(!updateFind)
 	{
-		if (abs(exploredEdgeAngle - currentAdj[node1Id][0].exploredEdgeAngles[i]) > eRadius)
+		cout << "Looking for unexplored edges in all possible edges" << endl;
+		currentAdj[nodeId][0].unexploredEdgeAngles.clear();
+		for (int i = 0; i < AllEdgeAngles.size(); i++)
 		{
-		currentAdj[node1Id][0].exploredEdgeAngles.erase(currentAdj[node1Id][0].exploredEdgeAngles.begin() + i);
-		currentAdj[node1Id].erase(currentAdj[node1Id].begin() + i);
+		currentAdj[nodeId][0].exploredEdgeAngles.push_back(AllEdgeAngles[i]);
+		edgeExists = checkLastEdgeExistence(nodeId);
+		currentAdj[nodeId][0].exploredEdgeAngles.pop_back();
+		
+			if(!edgeExists)
+			currentAdj[nodeId][0].unexploredEdgeAngles.push_back(AllEdgeAngles[i]);
+		
+		edgeExists = false;
 		}
 	}
-
+	
+	else
+	{
+		cout << "Looking for unexplored edges in explored edges" << endl;
+		for (int i = 0; i < currentAdj[nodeId][0].unexploredEdgeAngles.size(); i++)
+		{
+		currentAdj[nodeId][0].exploredEdgeAngles.push_back(currentAdj[nodeId][0].unexploredEdgeAngles[i]);
+		edgeExists = checkLastEdgeExistence(nodeId);
+		currentAdj[nodeId][0].exploredEdgeAngles.pop_back();
+		
+			if(edgeExists)
+			{
+			cout << "Removing " << i << "th element of vector unexploredEdgeAngles for node Id " <<  nodeId;
+			cout << " Vector Size before element removal : " << currentAdj[nodeId][0].unexploredEdgeAngles.size() << endl;
+			currentAdj[nodeId][0].unexploredEdgeAngles.erase(currentAdj[nodeId][0].unexploredEdgeAngles.begin()+i);
+			cout << " Vector Size after element removal : " << currentAdj[nodeId][0].unexploredEdgeAngles.size() << endl;
+			}
+		
+		edgeExists = false;
+		}
+	}
 }
 
 
@@ -478,12 +514,17 @@ cout << "-------------------------------------------------------------" << endl;
 		for (int j = 1; j < currentAdj[i].size(); j++)
 		cout << "(" << currentAdj[i][j].position.x << ", " << currentAdj[i][j].position.y << ")";
 	
-	cout << " - Explored Edge Angles:[" << currentAdj[i][0].exploredEdgeAngles[0];
+	if(currentAdj[i][0].exploredEdgeAngles.size() > 0) cout << " - Explored Edge Angles:[" << currentAdj[i][0].exploredEdgeAngles[0];
 	
 		for (int j = 1; j < currentAdj[i][0].exploredEdgeAngles.size(); j++)
 		cout << ", " << currentAdj[i][0].exploredEdgeAngles[j];
+		
+	if(currentAdj[i][0].unexploredEdgeAngles.size() > 0) cout << "] - Unexplored Edge Angles:[" << currentAdj[i][0].unexploredEdgeAngles[0];
 	
-	cout << "] - Traversal Costs:[" << currentAdj[i][1].cost2reach ;
+		for (int j = 1; j < currentAdj[i][0].unexploredEdgeAngles.size(); j++)
+		cout << ", " << currentAdj[i][0].unexploredEdgeAngles[j];
+	
+	if(currentAdj[i].size() > 1) cout << "] - Traversal Costs:[" << currentAdj[i][1].cost2reach ;
 	
 		for (int j = 2; j < currentAdj[i].size(); j++)
 		cout << ", " << currentAdj[i][j].cost2reach;
