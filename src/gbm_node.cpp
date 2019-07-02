@@ -8,6 +8,7 @@
 #include "cmath"
 #include "tf/transform_datatypes.h"
 #include "../../matplotlib-cpp/matplotlibcpp.h"
+#include "gbm_pkg/Graph.h"
 
 using namespace std; 
 namespace plt = matplotlibcpp;
@@ -32,6 +33,8 @@ int nEdges;
 float cost2reach;
 };
 
+ros::Publisher graphPub;
+bool odomInitialized = false;
 point currentPosition; // Closest Future Node position
 point currentLocation; // Current Position of the robot
 float currentHeading; // Current Heading of the robot
@@ -45,6 +48,7 @@ vector<float> currentEdgeAngles;
 vector<int> updateNodeIds;
 float pi = 3.14159;
 
+void publishGraph();
 void addEdge(vector<node> [], node, node);
 //void junctionCb(const std_msgs::Bool&);
 void odomCb(const nav_msgs::Odometry&);
@@ -69,7 +73,9 @@ int main(int argc, char **argv)
   //ros::Subscriber nEdgesSub = nh.subscribe("/X1/node_skeleton/number_of_edges", 5, nEdgesCb);
 	ros::Subscriber edgeAnglesSub = nh.subscribe("/X1/node_skeleton/edge_list", 10, edgeAnglesCb);
 	ros::Subscriber closestNodeSub = nh.subscribe("/X1/node_skeleton/closest_node", 10, closestNodeCb);
- 
+
+ 	graphPub = nh.advertise<gbm_pkg::Graph>("graph", 10);
+ 	
    // int n = 1000;
     
    // std::vector<double> xt(2), yt(2);
@@ -105,6 +111,7 @@ ros::spinOnce();
 			{
 				if(!updateNodeIds.empty())
 				{
+				cout << "Printing Stuff" << endl;
 				printAdj();
 					for (int k = 0; k < updateNodeIds.size(); k++)
 					{
@@ -167,10 +174,14 @@ ros::spinOnce();
 					}
 				updateNodeIds.clear();
 				}
-				xt[0] = currentAdj[currentNNodes-1][0].position.x;
-				yt[0] = currentAdj[currentNNodes-1][0].position.y;
-				xt[1] = currentAdj[currentNNodes-1][0].position.x;
-				yt[1] = currentAdj[currentNNodes-1][0].position.y;
+				
+				xt.clear(); yt.clear();
+				
+				xt.push_back(currentAdj[currentNodeId][0].position.x);
+				yt.push_back(currentAdj[currentNodeId][0].position.y);
+
+				xt.push_back(currentAdj[currentNodeId][0].position.x);
+				yt.push_back(currentAdj[currentNodeId][0].position.y);
 
 				plt::scatter(xt, yt, 15);
 
@@ -183,10 +194,17 @@ ros::spinOnce();
 
 void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 {
+
+	if(!odomInitialized)
+	{
+	ROS_INFO("Waiting for Odometry to initialize ... ");
+	return;
+	}
+
 	// When the robot leaves a node with ID currentNodeId, the heading is saved in the exploredEdgeAngles
 	//static int nEdges = msg.layout.dim[0].size;
 	//static float angleLeft = 0;
-	static bool updateAngleLeft = false;
+	static bool updateAngleLeft = true;
 
 		//if()
 		//{
@@ -231,7 +249,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 		bool nodeExists = checkNodeExistence(tempNode, closestNodeId);
 		//bool edgeExists = checkLastEdgeExistence(currentNodeId, currentAdj[currentNodeId][0].exploredEdgeAngles.back());
 	
-			if(!nodeExists)
+			if(!nodeExists) // If node and edge don't exist
 			{
 			
 				//if(currentNodeId > -1 && checkLastEdgeExistence(currentNodeId, currentAdj[currentNodeId][0].exploredEdgeAngles.back()))
@@ -248,7 +266,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			
 			updateAngleLeft = true;
 			}
-			else if(currentNodeId != closestNodeId && !checkLastEdgeExistence(currentNodeId))
+			else if(currentNodeId != closestNodeId && !checkLastEdgeExistence(currentNodeId)) // If node exists but edge doesn't exist
 			{	
 			
 			currentAdj[closestNodeId][0].cost2reach = distance(currentAdj[closestNodeId][0], currentAdj[currentNodeId][0]);
@@ -271,10 +289,12 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			
 			updateAngleLeft = true;
 			}
-			else if(currentNodeId != closestNodeId && checkLastEdgeExistence(currentNodeId))
+			else if(currentNodeId != closestNodeId && checkLastEdgeExistence(currentNodeId)) // If node exists and edge exists
 			{
 			currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back();
 			cout << "EDGE EXISTS ";
+			
+			currentNodeId = closestNodeId; //***********************************// CHECK THIS FOR FAILURES, IT IS ADDED LATER
 			
 			updateNodeIds.push_back(currentNodeId);
 			
@@ -316,8 +336,62 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 
 		estimatedNEdges = max(nEdgesHistory);
 		*/
+		
+		publishGraph();
 }
 
+void publishGraph()
+{
+
+gbm_pkg::Graph graph;
+
+graph.header.stamp = ros::Time::now();
+
+graph.size = currentNNodes;
+
+graph.currentNodeId = currentNodeId;
+
+graph.currentEdge = -10; // Means that its at a junction
+
+//cout << currentAdj[currentNodeId][0].exploredEdgeAngles.size() << "<?>" << (currentAdj[currentNodeId].size()-1) << endl; 
+
+if(currentNodeId > -1 && currentAdj[currentNodeId][0].exploredEdgeAngles.size() > (currentAdj[currentNodeId].size()-1))
+graph.currentEdge = currentAdj[currentNodeId][0].exploredEdgeAngles.back();
+
+	for (int i = 0; i < graph.size; i++)
+	{	
+		gbm_pkg::Node node;
+		
+		node.id = currentAdj[i][0].id; 
+		node.position.x = currentAdj[i][0].position.x;
+		node.position.y = currentAdj[i][0].position.y;
+		
+		node.nExploredEdge = currentAdj[i].size()-1;
+
+				for (int j = 1; j <= node.nExploredEdge; j++)
+				{
+				node.exploredEdge.push_back(currentAdj[i][0].exploredEdgeAngles[j-1]);
+				
+				geometry_msgs::Point neighborPosition;
+				neighborPosition.x = currentAdj[i][j].position.x;
+				neighborPosition.y = currentAdj[i][j].position.y;
+				
+				node.neighborPosition.push_back(neighborPosition);
+				
+				node.edgeCost.push_back(currentAdj[i][j].cost2reach);				
+				}
+
+		node.nUnexploredEdge = currentAdj[i][0].unexploredEdgeAngles.size();
+				
+				for (int j = 0; j < node.nUnexploredEdge; j++)
+				node.unexploredEdge.push_back(currentAdj[i][0].unexploredEdgeAngles[j]);		
+				
+		graph.node.push_back(node);
+	 }
+	
+graphPub.publish(graph);
+
+}
 /*
 void nEdgesCb(const std_msgs::Int32& msg)
 {
@@ -350,6 +424,8 @@ void junctionCb(const std_msgs::Bool& msg)
 void odomCb(const nav_msgs::Odometry& msg)
 {
 
+static bool firstOdomMsgReceived = true;
+
 tf::Quaternion q(msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w);
 tf::Matrix3x3 m(q);
 
@@ -371,6 +447,21 @@ static float yp[50] = {y,y,y,y,y,y,y,y,y,y};
 currentHeading = y;
 currentLocation.x = msg.pose.pose.position.x;
 currentLocation.y = msg.pose.pose.position.y;
+
+	if (firstOdomMsgReceived)
+	{
+	node tempNode;
+	tempNode.id = 0;
+	tempNode.position= currentLocation;
+	tempNode.nEdges = 0;
+	
+	addNode(tempNode);	
+	//updateNodeIds.push_back(0);
+	
+	firstOdomMsgReceived = false;
+	}
+
+odomInitialized = true;
 }
 
 void closestNodeCb(const geometry_msgs::PointStamped& msg)
