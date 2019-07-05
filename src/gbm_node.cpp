@@ -42,6 +42,7 @@ float currentHeading; // Current Heading of the robot
 int currentNNodes = 0;
 int currentNodeId = -1;
 float sRadius = 3;
+float rRadius = 3;
 float eRadius = 0.7;
 vector<vector<node> > currentAdj;
 vector<float> currentEdgeAngles;
@@ -286,7 +287,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			updateNodeIds.push_back(currentNodeId);
 			
 			currentNodeId = closestNodeId;
-			
+			 
 			updateAngleLeft = true;
 			}
 			else if(currentNodeId != closestNodeId && checkLastEdgeExistence(currentNodeId)) // If node exists and edge exists
@@ -299,6 +300,11 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			updateNodeIds.push_back(currentNodeId);
 			
 			updateAngleLeft = true;
+			}
+			else if(currentNodeId == closestNodeId && !updateAngleLeft) // If the robot is at the same node after it left the node //******************
+			{
+			currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back(); //******************
+			updateAngleLeft = true; //******************
 			}		
 		}
 		
@@ -378,7 +384,9 @@ graph.currentEdge = currentAdj[currentNodeId][0].exploredEdgeAngles.back();
 				
 				node.neighborPosition.push_back(neighborPosition);
 				
-				node.edgeCost.push_back(currentAdj[i][j].cost2reach);				
+				node.edgeCost.push_back(currentAdj[i][j].cost2reach);	
+				
+				node.neighborId.push_back(currentAdj[i][j].id);			
 				}
 
 		node.nUnexploredEdge = currentAdj[i][0].unexploredEdgeAngles.size();
@@ -501,7 +509,7 @@ currentAdj[v.id].push_back(u);
 
 bool checkNodeExistence(node& tempNode, int& closestNodeId)
 {
-	float d = sRadius;
+	float d = rRadius;
 	
 	for (int i=0; i<currentNNodes; i++)
 	{
@@ -525,7 +533,7 @@ bool checkNodeExistence(node& tempNode, int& closestNodeId)
 		*/
 	}
 	
-	if (d < sRadius)
+	if (d < rRadius)
 	return true;
 	else
 	return false;

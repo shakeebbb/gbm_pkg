@@ -9,6 +9,8 @@ float32[] exploredEdge
 
 geometry_msgs/Point[] neighborPosition
 
+int32[] neighborId
+
 float32[] edgeCost
 
 float32[] unexploredEdge
