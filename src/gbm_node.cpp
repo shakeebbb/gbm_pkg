@@ -41,9 +41,10 @@ float currentHeading; // Current Heading of the robot
 //int currentNEdges = 0;
 int currentNNodes = 0;
 int currentNodeId = -1;
-float sRadius = 3;
-float rRadius = 3;
-float eRadius = 0.7;
+float sRadius = -1; // If robot is close to this radius to the closest node with more than two edges then the robot detects a junction 
+									// If the robot is sRadius far from a leaving node then the leaving edge position is recorded 
+float rRadius = -1; // If a node is rRadius close to one of the existing nodes in the graph then the node already exists
+float eRadius = -1; // If an edge is eRadius closer to an already existing edge then the edge exists
 vector<vector<node> > currentAdj;
 vector<float> currentEdgeAngles;
 vector<int> updateNodeIds;
@@ -68,6 +69,14 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "gbm_node");
 
   ros::NodeHandle nh;
+
+  	while(sRadius == -1 || rRadius == -1 || eRadius == -1)
+  	{
+  	ros::param::get("gbm_node/sRadius", sRadius);
+  	ros::param::get("gbm_node/rRadius", rRadius);
+  	ros::param::get("gbm_node/eRadius", eRadius);
+  	ROS_INFO("Waiting for the parameters ... ");
+  	}
 
   //ros::Subscriber junctionSub = nh.subscribe("/X1/node_skeleton/at_a_junction", 5, junctionCb);
   ros::Subscriber odomSub = nh.subscribe("/X1/odometry", 5, odomCb);
@@ -303,7 +312,11 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			}
 			else if(currentNodeId == closestNodeId && !updateAngleLeft) // If the robot is at the same node after it left the node //******************
 			{
-			currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back(); //******************
+			//currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back(); //******************
+			
+			currentAdj[currentNodeId][0].cost2reach = 0; //*******************
+			currentAdj[currentNodeId].push_back(currentAdj[currentNodeId][0]); //**************
+			
 			updateAngleLeft = true; //******************
 			}		
 		}

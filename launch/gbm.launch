@@ -1,5 +1,15 @@
 <launch>
-  <node name="gbm_node" pkg="gbm_pkg" type="gbm_node"  output="screen"/>
+  <node name="gbm_node" pkg="gbm_pkg" type="gbm_node"  output="screen" >
+  <param name = "sRadius" type = "double" value="3.00"/>
+  <param name = "rRadius" type = "double" value="3.00"/>
+  <param name = "eRadius" type = "double" value="0.70"/>
+  </node>
   <node pkg="rosbag" type="play" name="bag_player" args="$(env HOME)/gbm_ws/bags/node_skeleton_data_2019-06-18-15-49-05.bag"/>
 </launch>
+
+<!-- 
+// If the robot is sRadius close to the closest node with more than two edges then the robot detects a junction 
+// If the robot is sRadius far from a leaving node then the leaving edge position is recorded 
+// If a node is rRadius close to one of the existing nodes in the graph then the node already exists
+// If an edge is eRadius closer to an already existing edge then the edge exists -->
 
