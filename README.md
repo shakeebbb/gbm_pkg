@@ -9,3 +9,6 @@ Code for graph-based map, SubT project
 
 ~The node takes in the odometry, closest node information and edge_list to check for the junctions on the following topics "/X1/odometry", "/X1/node_skeleton/closest_node", "/X1/node_skeleton/edge_list".   
 ~The node publishes the topological graph on the message type "Graph" on the topic "/graph" built inside the package.
+	. currentNodeId is the Id of the node last visited
+	. currentEdge is the edge which the robot is currently traversing from the current node (currentEdge is -10 if the robot is at a junction)
+	. nextNodeId is the Id of the next predicted node if the edge was explored before (nextNodeId is -10 if the robot is at the junction and -1 if the edge is previously unexplored)

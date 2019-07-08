@@ -58,7 +58,7 @@ void nEdgesCb(const std_msgs::Int32&);
 void edgeAnglesCb(const std_msgs::Float32MultiArray&);
 void closestNodeCb(const geometry_msgs::PointStamped&);
 void updateUnexploredEdgeAngles(int, bool, vector<float>);
-bool checkLastEdgeExistence(int);
+int checkLastEdgeExistence(int);
 bool checkNodeExistence(node&, int&);
 float distance(node&, node&);
 void addNode(node);
@@ -276,7 +276,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			
 			updateAngleLeft = true;
 			}
-			else if(currentNodeId != closestNodeId && !checkLastEdgeExistence(currentNodeId)) // If node exists but edge doesn't exist
+			else if(currentNodeId != closestNodeId && checkLastEdgeExistence(currentNodeId) == -1) // If node exists but edge doesn't exist
 			{	
 			
 			currentAdj[closestNodeId][0].cost2reach = distance(currentAdj[closestNodeId][0], currentAdj[currentNodeId][0]);
@@ -299,7 +299,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			 
 			updateAngleLeft = true;
 			}
-			else if(currentNodeId != closestNodeId && checkLastEdgeExistence(currentNodeId)) // If node exists and edge exists
+			else if(currentNodeId != closestNodeId && checkLastEdgeExistence(currentNodeId) != -1) // If node exists and edge exists
 			{
 			currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back();
 			cout << "EDGE EXISTS ";
@@ -371,11 +371,15 @@ graph.size = currentNNodes;
 graph.currentNodeId = currentNodeId;
 
 graph.currentEdge = -10; // Means that its at a junction
+graph.nextNodeId = -10; // Means that its at a junction, -1 would mean unexplored edge
 
 //cout << currentAdj[currentNodeId][0].exploredEdgeAngles.size() << "<?>" << (currentAdj[currentNodeId].size()-1) << endl; 
 
 if(currentNodeId > -1 && currentAdj[currentNodeId][0].exploredEdgeAngles.size() > (currentAdj[currentNodeId].size()-1))
+{
 graph.currentEdge = currentAdj[currentNodeId][0].exploredEdgeAngles.back();
+graph.nextNodeId = checkLastEdgeExistence(currentNodeId);
+}
 
 	for (int i = 0; i < graph.size; i++)
 	{	
@@ -563,7 +567,7 @@ void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEd
 		for (int i = 0; i < AllEdgeAngles.size(); i++)
 		{
 		currentAdj[nodeId][0].exploredEdgeAngles.push_back(AllEdgeAngles[i]);
-		edgeExists = checkLastEdgeExistence(nodeId);
+		edgeExists = checkLastEdgeExistence(nodeId) != -1;
 		currentAdj[nodeId][0].exploredEdgeAngles.pop_back();
 		
 			if(!edgeExists)
@@ -579,7 +583,7 @@ void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEd
 		for (int i = 0; i < currentAdj[nodeId][0].unexploredEdgeAngles.size(); i++)
 		{
 		currentAdj[nodeId][0].exploredEdgeAngles.push_back(currentAdj[nodeId][0].unexploredEdgeAngles[i]);
-		edgeExists = checkLastEdgeExistence(nodeId);
+		edgeExists = checkLastEdgeExistence(nodeId) != -1;
 		currentAdj[nodeId][0].exploredEdgeAngles.pop_back();
 		
 			if(edgeExists)
@@ -596,16 +600,16 @@ void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEd
 }
 
 
-bool checkLastEdgeExistence(int nodeId)
+int checkLastEdgeExistence(int nodeId)
 {
 	float edgeAngle = currentAdj[nodeId][0].exploredEdgeAngles.back();
 	for (int i = 0; i < (currentAdj[nodeId][0].exploredEdgeAngles.size()-1); i++)
 	{
 		cout << "Comparing edgeAngle = " << edgeAngle  << " with existing edgeAngle = " << currentAdj[nodeId][0].exploredEdgeAngles[i] << endl;
 		if (abs(edgeAngle - currentAdj[nodeId][0].exploredEdgeAngles[i]) < eRadius || (2*pi - abs(edgeAngle - currentAdj[nodeId][0].exploredEdgeAngles[i])) < eRadius )
-		return true;
+		return currentAdj[nodeId][i+1].id;
 	}
-	return false;
+	return -1;
 }
 
 float distance(node& node1, node& node2)

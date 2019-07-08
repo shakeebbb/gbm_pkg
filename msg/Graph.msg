@@ -1,7 +1,9 @@
 Header header
-uint32 size
+int32 size
 
 gbm_pkg/Node[] node
 
-uint32 currentNodeId
+int32 currentNodeId
 float32 currentEdge
+
+int32 nextNodeId
