@@ -9,7 +9,7 @@
 #include "tf/transform_datatypes.h"
 #include "../../matplotlib-cpp/matplotlibcpp.h"
 #include "gbm_pkg/Graph.h"
-
+#include <fstream>
 using namespace std; 
 namespace plt = matplotlibcpp;
 
@@ -50,6 +50,8 @@ vector<float> currentEdgeAngles;
 vector<int> updateNodeIds;
 float pi = 3.14159;
 
+ofstream logFile;
+
 void publishGraph();
 void addEdge(vector<node> [], node, node);
 //void junctionCb(const std_msgs::Bool&);
@@ -70,13 +72,32 @@ int main(int argc, char **argv)
 
   ros::NodeHandle nh;
 
-  	while(sRadius == -1 || rRadius == -1 || eRadius == -1)
+	string logFilePath = "";
+	
+  	while(sRadius == -1 || rRadius == -1 || eRadius == -1 || logFilePath == "")
   	{
   	ros::param::get("gbm_node/sRadius", sRadius);
   	ros::param::get("gbm_node/rRadius", rRadius);
   	ros::param::get("gbm_node/eRadius", eRadius);
+  	ros::param::get("gbm_node/logFilePath", logFilePath);
   	ROS_INFO("Waiting for the parameters ... ");
   	}
+  	
+  cout << "Writing logs to file ..." << endl;
+  cout << logFilePath << endl;
+
+	logFile.open (logFilePath, ios::trunc);
+	
+	const time_t ctt = time(0);
+  logFile << asctime(localtime(&ctt)) << endl;
+  
+  logFile << "Parameters List" << endl;
+  logFile << "sRadius = " << sRadius << endl;
+  logFile << "sRadius = " << rRadius << endl;
+  logFile << "sRadius = " << eRadius << endl;
+  logFile << "sRadius = " << logFilePath << endl;
+  
+  cout << "Use 'tail -f /gbm_pkg/logs/mission_logs.txt' to view" << endl; 
 
   //ros::Subscriber junctionSub = nh.subscribe("/X1/node_skeleton/at_a_junction", 5, junctionCb);
   ros::Subscriber odomSub = nh.subscribe("/X1/odometry", 5, odomCb);
@@ -121,23 +142,14 @@ ros::spinOnce();
 			{
 				if(!updateNodeIds.empty())
 				{
-				cout << "Printing Stuff" << endl;
+				//cout << "Printing Graph" << endl;
 				printAdj();
 					for (int k = 0; k < updateNodeIds.size(); k++)
 					{
 						int i = updateNodeIds[k];
 						
-						cout << "currentAdj[i].size() : " << currentAdj[i].size() << endl;
-						
 						for (int j = 0; j < currentAdj[i].size(); j++)
 						{
-							
-						//std::vector<double> xt(2), yt(2);
-						//xt.push_back(currentAdj[currentNNodes][0].position.x);
-						//yt.push_back(currentAdj[currentNNodes][0].position.y);
-							
-							//if (j != 0)
-							//{
 							xt.clear(); yt.clear();
 
 							xt.push_back(currentAdj[i][0].position.x);
@@ -146,12 +158,7 @@ ros::spinOnce();
 							xt.push_back(currentAdj[i][j].position.x);
 							yt.push_back(currentAdj[i][j].position.y);
 							
-							//xt.push_back(currentAdj[i][0].position.x);
-							//yt.push_back(currentAdj[i][0].position.y);
 
-							//cout << xt.at(0) << " , " << yt.at(0) << endl; 
-
-							//plt::scatter(xt, yt, 15);
 							cout << xt[0] << "," << yt[0] << endl;
 							cout << xt[1] << "," << yt[1] << endl;
 
@@ -161,10 +168,8 @@ ros::spinOnce();
 							plt::xlim(0, 100);
 							plt::ylim(-150, 150);
 							plt::pause(0.1);
-							//}
 						}
-
-						cout << "currentAdj[i][0].exploredEdgeAngles.size() : " << currentAdj[i][0].exploredEdgeAngles.size() << endl;
+						
 						for (int j = 0; j < currentAdj[i][0].exploredEdgeAngles.size(); j++)
 						{
 						
@@ -227,9 +232,10 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 	//nEdges = msg.layout.dim[0].size;
 
 	 // When a new node is found along the edge it is added corresponding to the exploredEdgeAngles last value already saved
-	cout << endl;
+	//cout << endl;
 	
-	ROS_INFO("Edge Angles Callback Called");
+	//ROS_INFO("Edge Angles Callback Called");
+	logFile << "---------" << endl << "Edge Angles Callback Called" << endl;
 
 	currentEdgeAngles.clear();
 
@@ -240,7 +246,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 	
 	bool at_a_junction = (msg.layout.dim[0].size > 2) && pow(currentPosition.x - currentLocation.x, 2) + pow(currentPosition.y - currentLocation.y, 2) < pow(sRadius, 2);
 	
-	cout << "Edges Array Size = " << msg.layout.dim[0].size << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes << " currentNodeId = "<< currentNodeId 
+	logFile << "Edges Array Size = " << msg.layout.dim[0].size << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes << " currentNodeId = "<< currentNodeId 
 			 << " updateAngleLeft = " << updateAngleLeft << endl;
 
 		node tempNode;
@@ -250,8 +256,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 		
 		if (at_a_junction)
 		{
-		
-		cout << "Junction Detected at " << "(" <<  currentPosition.x <<  "," << currentPosition.y  << ")" << endl;
+		logFile << "Junction Detected at " << "(" <<  currentPosition.x <<  "," << currentPosition.y  << ")" << endl;
 
 		tempNode.exploredEdgeAngles.push_back((currentHeading > 0) ? (currentHeading-pi) : (currentHeading+pi));
 
@@ -262,11 +267,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			if(!nodeExists) // If node and edge don't exist
 			{
 			
-				//if(currentNodeId > -1 && checkLastEdgeExistence(currentNodeId, currentAdj[currentNodeId][0].exploredEdgeAngles.back()))
-				//{
-				//currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back();
-				//cout << "EDGE EXISTS ";
-				//}
+			logFile << "Node Exists !!!" << endl;
+			
 			if(currentNNodes > 0) updateNodeIds.push_back(currentNNodes-1);
 			addNode(tempNode);
 			
@@ -278,6 +280,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			}
 			else if(currentNodeId != closestNodeId && checkLastEdgeExistence(currentNodeId) == -1) // If node exists but edge doesn't exist
 			{	
+			
+			logFile << "Node Exists but Edge Doesn't!!!" << endl;
 			
 			currentAdj[closestNodeId][0].cost2reach = distance(currentAdj[closestNodeId][0], currentAdj[currentNodeId][0]);
 			currentAdj[currentNodeId].push_back(currentAdj[closestNodeId][0]);
@@ -302,7 +306,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			else if(currentNodeId != closestNodeId && checkLastEdgeExistence(currentNodeId) != -1) // If node exists and edge exists
 			{
 			currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back();
-			cout << "EDGE EXISTS ";
+			
+			logFile << "Node Exists and Edge Exists !!!" << endl;
 			
 			currentNodeId = closestNodeId; //***********************************// CHECK THIS FOR FAILURES, IT IS ADDED LATER
 			
@@ -312,6 +317,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			}
 			else if(currentNodeId == closestNodeId && !updateAngleLeft) // If the robot is at the same node after it left the node //******************
 			{
+			
+			logFile << "Robot Came Back to the Same Node !!!" << endl;
 			//currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back(); //******************
 			
 			currentAdj[currentNodeId][0].cost2reach = 0; //*******************
@@ -321,14 +328,14 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			}		
 		}
 		
-		cout << "updateAngleLeft = " << updateAngleLeft << endl;
+		logFile << "updateAngleLeft = " << updateAngleLeft << endl;
 		
 		tempNode.position = currentLocation;
 		if (currentNodeId > -1 && distance(currentAdj[currentNodeId][0], tempNode) > sRadius && updateAngleLeft) // && distance(currentAdj[currentNodeId][0], tempNode) > sRadius)
-		{
-		cout << "currentAdj[currentNodeId][0].position = (" << currentAdj[currentNodeId][0].position.x << "," << currentAdj[currentNodeId][0].position.y << ")" << endl;
-		cout << "tempNode.position = (" << tempNode.position.x << "," << tempNode.position.y << ")" << endl;
-		cout << "distance(currentAdj[currentNodeId][0], tempNode) = " << distance(currentAdj[currentNodeId][0], tempNode) << endl;
+		{		
+		logFile << "currentNode Position = (" << currentAdj[currentNodeId][0].position.x << "," << currentAdj[currentNodeId][0].position.y << ")" << endl;
+		logFile << "Robot's Position = (" << tempNode.position.x << "," << tempNode.position.y << ")" << endl;
+		logFile << "Distance of the robot's location from the currentNode = " << distance(currentAdj[currentNodeId][0], tempNode) << endl;
 		
 		currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentHeading);
 		//updateNodeIds.push_back(currentNodeId);
@@ -515,7 +522,7 @@ currentAdj.push_back(tempVector);
 currentNodeId = currentNNodes;
 currentNNodes += 1;
 
-cout << "Node Added" << endl;
+logFile << "Node Added" << endl;
 }
 
 void addEdge(node u, node v) 
@@ -562,7 +569,8 @@ void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEd
 	
 	if(!updateFind)
 	{
-		cout << "Looking for unexplored edges in all possible edges" << endl;
+		logFile << "Checking if all the edges are explored, if not adding them to the unexplored edges" << endl;
+		
 		currentAdj[nodeId][0].unexploredEdgeAngles.clear();
 		for (int i = 0; i < AllEdgeAngles.size(); i++)
 		{
@@ -579,7 +587,8 @@ void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEd
 	
 	else
 	{
-		cout << "Looking for unexplored edges in explored edges" << endl;
+		logFile << "Checking if all the unexplored edges are explored, if yes removing them from the unexplored edges" << endl;
+		
 		for (int i = 0; i < currentAdj[nodeId][0].unexploredEdgeAngles.size(); i++)
 		{
 		currentAdj[nodeId][0].exploredEdgeAngles.push_back(currentAdj[nodeId][0].unexploredEdgeAngles[i]);
@@ -588,10 +597,12 @@ void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEd
 		
 			if(edgeExists)
 			{
-			cout << "Removing " << i << "th element of vector unexploredEdgeAngles for node Id " <<  nodeId;
-			cout << " Vector Size before element removal : " << currentAdj[nodeId][0].unexploredEdgeAngles.size() << endl;
+			logFile << "Removing " << i << "th element of vector unexploredEdgeAngles for node Id " <<  nodeId;
+			logFile << " Vector Size before element removal : " << currentAdj[nodeId][0].unexploredEdgeAngles.size() << endl;
+			
 			currentAdj[nodeId][0].unexploredEdgeAngles.erase(currentAdj[nodeId][0].unexploredEdgeAngles.begin()+i);
-			cout << " Vector Size after element removal : " << currentAdj[nodeId][0].unexploredEdgeAngles.size() << endl;
+
+			logFile << " Vector Size after element removal : " << currentAdj[nodeId][0].unexploredEdgeAngles.size() << endl;
 			}
 		
 		edgeExists = false;
@@ -605,7 +616,8 @@ int checkLastEdgeExistence(int nodeId)
 	float edgeAngle = currentAdj[nodeId][0].exploredEdgeAngles.back();
 	for (int i = 0; i < (currentAdj[nodeId][0].exploredEdgeAngles.size()-1); i++)
 	{
-		cout << "Comparing edgeAngle = " << edgeAngle  << " with existing edgeAngle = " << currentAdj[nodeId][0].exploredEdgeAngles[i] << endl;
+		logFile << "Comparing last exploredEdgeAngle = " << edgeAngle  << " with existing exploredEdgeAngle = " << currentAdj[nodeId][0].exploredEdgeAngles[i] << endl;
+		
 		if (abs(edgeAngle - currentAdj[nodeId][0].exploredEdgeAngles[i]) < eRadius || (2*pi - abs(edgeAngle - currentAdj[nodeId][0].exploredEdgeAngles[i])) < eRadius )
 		return currentAdj[nodeId][i+1].id;
 	}
@@ -620,36 +632,52 @@ return sqrt(distance);
 
 void printAdj()
 {
-
-cout << "-------------------------------------------------------------" << endl;
+logFile << "-------------------------------------------------------------" << endl;
 
 	for (int i = 0; i < currentNNodes; i++)
 	{
-	cout << "| " << "ID:" << currentAdj[i][0].id << " - Position:" <<  "(" << currentAdj[i][0].position.x << " , " << currentAdj[i][0].position.y << ") - Neighbours' Positions:";
+	logFile << "| " << "ID:" << currentAdj[i][0].id << " - Position:" <<  "(" << currentAdj[i][0].position.x << " , " << currentAdj[i][0].position.y << ") - Neighbours' Positions:";
 	
 		for (int j = 1; j < currentAdj[i].size(); j++)
-		cout << "(" << currentAdj[i][j].position.x << ", " << currentAdj[i][j].position.y << ")";
+		{
+		logFile << "(" << currentAdj[i][j].position.x << ", " << currentAdj[i][j].position.y << ")";
+		}
 	
-	if(currentAdj[i][0].exploredEdgeAngles.size() > 0) cout << " - Explored Edge Angles:[" << currentAdj[i][0].exploredEdgeAngles[0];
+		if(currentAdj[i][0].exploredEdgeAngles.size() > 0)
+		{
+		logFile << " - Explored Edge Angles:[" << currentAdj[i][0].exploredEdgeAngles[0];
+		}
 	
 		for (int j = 1; j < currentAdj[i][0].exploredEdgeAngles.size(); j++)
-		cout << ", " << currentAdj[i][0].exploredEdgeAngles[j];
+		{
+		logFile << ", " << currentAdj[i][0].exploredEdgeAngles[j];
+		}
 		
-	if(currentAdj[i][0].unexploredEdgeAngles.size() > 0) cout << "] - Unexplored Edge Angles:[" << currentAdj[i][0].unexploredEdgeAngles[0];
+		if(currentAdj[i][0].unexploredEdgeAngles.size() > 0)
+		{ 
+		logFile << "] - Unexplored Edge Angles:[" << currentAdj[i][0].unexploredEdgeAngles[0];
+		}
 	
 		for (int j = 1; j < currentAdj[i][0].unexploredEdgeAngles.size(); j++)
-		cout << ", " << currentAdj[i][0].unexploredEdgeAngles[j];
+		{
+		logFile << ", " << currentAdj[i][0].unexploredEdgeAngles[j];
+		}
 	
-	if(currentAdj[i].size() > 1) cout << "] - Traversal Costs:[" << currentAdj[i][1].cost2reach ;
+		if(currentAdj[i].size() > 1)
+		{
+	 	logFile << "] - Traversal Costs:[" << currentAdj[i][1].cost2reach ;
+	 	}
 	
 		for (int j = 2; j < currentAdj[i].size(); j++)
-		cout << ", " << currentAdj[i][j].cost2reach;
-		
-	cout << "] |" << endl << endl;
+		{
+		logFile << ", " << currentAdj[i][j].cost2reach;
+		}
+
+	logFile << "] |" << endl << endl; 
 	
 	}
-	
-cout << endl << "---------------------------------------------------------" << endl;
+
+logFile << endl << "---------------------------------------------------------" << endl;
 }
 
 
