@@ -1,4 +1,5 @@
 #include "ros/ros.h"
+#include "ros/package.h"
 #include "std_msgs/Bool.h"
 #include "geometry_msgs/PointStamped.h"
 #include "std_msgs/Float32MultiArray.h"
@@ -82,22 +83,31 @@ int main(int argc, char **argv)
   	ros::param::get("gbm_node/logFilePath", logFilePath);
   	ROS_INFO("Waiting for the parameters ... ");
   	}
-  	
-  cout << "Writing logs to file ..." << endl;
-  cout << logFilePath << endl;
 
+	logFilePath = ros::package::getPath("gbm_pkg");
+	logFilePath.append("/logs/mission_logs.txt");
+	
+	cout << "Log File Path : " << logFilePath << endl;
 	logFile.open (logFilePath, ios::trunc);
+	
+	while(!logFile.is_open())
+	{
+	logFile.open (logFilePath, ios::trunc);
+	cout << "Waiting for the log file to open" << endl;
+	}
+	
+	cout << "Writing logs to file ..." << endl;
 	
 	const time_t ctt = time(0);
   logFile << asctime(localtime(&ctt)) << endl;
   
   logFile << "Parameters List" << endl;
   logFile << "sRadius = " << sRadius << endl;
-  logFile << "sRadius = " << rRadius << endl;
-  logFile << "sRadius = " << eRadius << endl;
-  logFile << "sRadius = " << logFilePath << endl;
+  logFile << "rRadius = " << rRadius << endl;
+  logFile << "eRadius = " << eRadius << endl;
+  logFile << "logFilePath = " << logFilePath << endl;
   
-  cout << "Use 'tail -f /gbm_pkg/logs/mission_logs.txt' to view" << endl; 
+  cout << "Use 'tail -f <Log File Path>' to view" << endl; 
 
   //ros::Subscriber junctionSub = nh.subscribe("/X1/node_skeleton/at_a_junction", 5, junctionCb);
   ros::Subscriber odomSub = nh.subscribe("/X1/odometry", 5, odomCb);
@@ -267,7 +277,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			if(!nodeExists) // If node and edge don't exist
 			{
 			
-			logFile << "Node Exists !!!" << endl;
+			logFile << "Node Doesn't Exist !!!" << endl;
 			
 			if(currentNNodes > 0) updateNodeIds.push_back(currentNNodes-1);
 			addNode(tempNode);
@@ -291,6 +301,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			currentAdj[currentNodeId][0].cost2reach = distance(currentAdj[currentNodeId][0], currentAdj[closestNodeId][0]);
 			currentAdj[closestNodeId].push_back(currentAdj[currentNodeId][0]);
 			
+			currentAdj[closestNodeId][0].position = currentPosition; // ........
+			
 			//pruneEdgeIfRedundant(closestNodeId, currentNodeId, currentAdj[closestNodeId][0].exploredEdgeAngles.back());
 			//pruneEdgeIfRedundant(currentNodeId, closestNodeId, currentAdj[currentNodeId][0].exploredEdgeAngles.back());
 			
@@ -307,6 +319,8 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			{
 			currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back();
 			
+			currentAdj[closestNodeId][0].position = currentPosition; // ....
+			
 			logFile << "Node Exists and Edge Exists !!!" << endl;
 			
 			currentNodeId = closestNodeId; //***********************************// CHECK THIS FOR FAILURES, IT IS ADDED LATER
@@ -317,14 +331,27 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			}
 			else if(currentNodeId == closestNodeId && !updateAngleLeft) // If the robot is at the same node after it left the node //******************
 			{
-			
+				
 			logFile << "Robot Came Back to the Same Node !!!" << endl;
 			//currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back(); //******************
 			
-			currentAdj[currentNodeId][0].cost2reach = 0; //*******************
-			currentAdj[currentNodeId].push_back(currentAdj[currentNodeId][0]); //**************
-			
-			updateAngleLeft = true; //******************
+				if(checkLastEdgeExistence(currentNodeId) != -1)
+				{
+				logFile << "... Edge Already Exists" << endl;
+				currentAdj[currentNodeId][0].exploredEdgeAngles.pop_back();
+				
+				currentAdj[closestNodeId][0].position = currentPosition; // ...........
+				}
+				else
+				{
+				logFile << "... Adding Self Loop" << endl;
+				currentAdj[currentNodeId][0].cost2reach = 0; //*******************
+				currentAdj[currentNodeId].push_back(currentAdj[currentNodeId][0]); //**************
+				
+				currentAdj[closestNodeId][0].position = currentPosition; // ...........
+				}
+				
+				updateAngleLeft = true; //******************
 			}		
 		}
 		
@@ -565,6 +592,8 @@ bool checkNodeExistence(node& tempNode, int& closestNodeId)
 
 void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEdgeAngles)
 {
+	printAdj();
+		
 	bool edgeExists = false;
 	
 	if(!updateFind)
@@ -587,7 +616,27 @@ void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEd
 	
 	else
 	{
-		logFile << "Checking if all the unexplored edges are explored, if yes removing them from the unexplored edges" << endl;
+		logFile << "Checking if all the unexplored edges (copied to AllEdgeAngles) are explored, if not adding them to the unexplored edges" << endl;
+		
+		AllEdgeAngles.clear();
+		AllEdgeAngles = currentAdj[nodeId][0].unexploredEdgeAngles;
+		
+		currentAdj[nodeId][0].unexploredEdgeAngles.clear();
+		for (int i = 0; i < AllEdgeAngles.size(); i++)
+		{
+		currentAdj[nodeId][0].exploredEdgeAngles.push_back(AllEdgeAngles[i]);
+		edgeExists = checkLastEdgeExistence(nodeId) != -1;
+		currentAdj[nodeId][0].exploredEdgeAngles.pop_back();
+		
+			if(!edgeExists)
+			currentAdj[nodeId][0].unexploredEdgeAngles.push_back(AllEdgeAngles[i]);
+		
+		edgeExists = false;
+		}
+		
+		
+	/*	
+		...........
 		
 		for (int i = 0; i < currentAdj[nodeId][0].unexploredEdgeAngles.size(); i++)
 		{
@@ -607,7 +656,9 @@ void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEd
 		
 		edgeExists = false;
 		}
+		*/
 	}
+	printAdj();
 }
 
 

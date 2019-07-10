@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   tf
   message_generation
+  roslib
 )
 
 find_package(PythonLibs 2.7)
@@ -117,7 +118,7 @@ find_package(PythonLibs 2.7)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES gbm_pkg
-#  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs
+# CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs roslib
 #  DEPENDS system_lib
    CATKIN_DEPENDS message_runtime
 )

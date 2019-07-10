@@ -3,7 +3,7 @@
   <param name = "sRadius" type = "double" value="3.00"/>
   <param name = "rRadius" type = "double" value="3.00"/>
   <param name = "eRadius" type = "double" value="0.70"/>
-  <param name = "logFilePath" type = "string" value="$(env HOME)/gbm_ws/logs/mission_logs.txt"/>
+  <param name = "logFilePath" type = "string" value="$(find gbm_pkg)/logs/mission_logs.txt"/>
   </node>
   <node pkg="rosbag" type="play" name="bag_player" args="$(env HOME)/gbm_ws/bags/node_skeleton_data_2019-06-18-15-49-05.bag"/>
 </launch>
