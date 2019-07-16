@@ -3,6 +3,7 @@
 #include "std_msgs/Bool.h"
 #include "geometry_msgs/PointStamped.h"
 #include "std_msgs/Float32MultiArray.h"
+#include "std_msgs/Bool.h"
 #include "geometry_msgs/PoseArray.h"
 #include "std_msgs/Int32.h"
 #include "nav_msgs/Odometry.h"
@@ -46,16 +47,19 @@ float sRadius = -1; // If robot is close to this radius to the closest node with
 									// If the robot is sRadius far from a leaving node then the leaving edge position is recorded 
 float rRadius = -1; // If a node is rRadius close to one of the existing nodes in the graph then the node already exists
 float eRadius = -1; // If an edge is eRadius closer to an already existing edge then the edge exists
+float dRadius = -1; // If an unexplored edge is dRadius close to the currentHeading at a junction with dead end flag on then a self loop is created
 vector<vector<node> > currentAdj;
 vector<float> currentEdgeAngles;
 vector<int> updateNodeIds;
 float pi = 3.14159;
+bool currentDeadEndFlag = false;
 
 ofstream logFile;
 
 void publishGraph();
 void addEdge(vector<node> [], node, node);
 //void junctionCb(const std_msgs::Bool&);
+void deadEndCb(const std_msgs::Bool&);
 void odomCb(const nav_msgs::Odometry&);
 void nEdgesCb(const std_msgs::Int32&);
 void edgeAnglesCb(const std_msgs::Float32MultiArray&);
@@ -63,6 +67,7 @@ void closestNodeCb(const geometry_msgs::PointStamped&);
 void updateUnexploredEdgeAngles(int, bool, vector<float>);
 int checkLastEdgeExistence(int);
 bool checkNodeExistence(node&, int&);
+bool checkEdgeExistence (vector<float>, float, float, int&);
 float distance(node&, node&);
 void addNode(node);
 void printAdj();
@@ -75,11 +80,12 @@ int main(int argc, char **argv)
 
 	string logFilePath = "";
 	
-  	while(sRadius == -1 || rRadius == -1 || eRadius == -1 || logFilePath == "")
+  	while(sRadius == -1 || rRadius == -1 || eRadius == -1 || dRadius == -1 || logFilePath == "")
   	{
   	ros::param::get("gbm_node/sRadius", sRadius);
   	ros::param::get("gbm_node/rRadius", rRadius);
   	ros::param::get("gbm_node/eRadius", eRadius);
+  	ros::param::get("gbm_node/dRadius", dRadius);
   	ros::param::get("gbm_node/logFilePath", logFilePath);
   	ROS_INFO("Waiting for the parameters ... ");
   	}
@@ -105,15 +111,17 @@ int main(int argc, char **argv)
   logFile << "sRadius = " << sRadius << endl;
   logFile << "rRadius = " << rRadius << endl;
   logFile << "eRadius = " << eRadius << endl;
+  logFile << "dRadius = " << dRadius << endl;
   logFile << "logFilePath = " << logFilePath << endl;
   
   cout << "Use 'tail -f <Log File Path>' to view" << endl; 
 
   //ros::Subscriber junctionSub = nh.subscribe("/X1/node_skeleton/at_a_junction", 5, junctionCb);
-  ros::Subscriber odomSub = nh.subscribe("/X1/odometry", 5, odomCb);
+  ros::Subscriber odomSub = nh.subscribe("odometry", 5, odomCb);
   //ros::Subscriber nEdgesSub = nh.subscribe("/X1/node_skeleton/number_of_edges", 5, nEdgesCb);
-	ros::Subscriber edgeAnglesSub = nh.subscribe("/X1/node_skeleton/edge_list", 10, edgeAnglesCb);
-	ros::Subscriber closestNodeSub = nh.subscribe("/X1/node_skeleton/closest_node", 10, closestNodeCb);
+	ros::Subscriber edgeAnglesSub = nh.subscribe("edge_list", 10, edgeAnglesCb);
+	ros::Subscriber closestNodeSub = nh.subscribe("closest_node", 10, closestNodeCb);
+	ros::Subscriber deadEndSub = nh.subscribe("dead_end_flag", 10, deadEndCb);
 
  	graphPub = nh.advertise<gbm_pkg::Graph>("graph", 10);
  	
@@ -352,7 +360,28 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 				}
 				
 				updateAngleLeft = true; //******************
-			}		
+			}
+			
+			/////////// Dead End at a Node Feature ****************
+			
+			if (currentDeadEndFlag)
+			{
+				int closestEdgeId = -1;
+				bool edgeExists = false;
+				
+				edgeExists = checkEdgeExistence (currentAdj[currentNodeId][0].unexploredEdgeAngles, currentHeading, dRadius, closestEdgeId);
+				
+				if(edgeExists)
+				{
+				logFile << "Dead end at an unexplored edge is detected :  Unexplored Edge = " << currentAdj[currentNodeId][0].unexploredEdgeAngles[closestEdgeId] << " Current Heading = " << currentHeading << endl;
+				
+				currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentAdj[currentNodeId][0].unexploredEdgeAngles[closestEdgeId]);
+				
+				updateUnexploredEdgeAngles(currentNodeId, true, {});
+				}
+			}
+		
+			///////////////******************************		
 		}
 		
 		logFile << "updateAngleLeft = " << updateAngleLeft << endl;
@@ -480,6 +509,11 @@ void junctionCb(const std_msgs::Bool& msg)
 }
 */
 
+void deadEndCb(const std_msgs::Bool& msg)
+{
+currentDeadEndFlag = msg.data;
+}
+
 void odomCb(const nav_msgs::Odometry& msg)
 {
 
@@ -557,6 +591,26 @@ void addEdge(node u, node v)
 currentAdj[u.id].push_back(v); 
 currentAdj[v.id].push_back(u); 
 } 
+
+bool checkEdgeExistence (vector<float> findIn, float findWhat, float radius, int& closestEdgeId)
+{
+	float d = radius;
+	
+	for (int i = 0; i < findIn.size(); i++)
+	{
+		float distance = min(abs(findWhat - findIn[i]), 2*pi - abs(findWhat - findIn[i]));
+		if (distance < d)
+		{
+		closestEdgeId = i;
+		d = distance;
+		}
+	}
+	
+	if (d < radius)
+	return true;
+	else
+	return false;
+}
 
 bool checkNodeExistence(node& tempNode, int& closestNodeId)
 {
