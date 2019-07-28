@@ -7,9 +7,9 @@
   
   <param name = "logFilePath" type = "string" value="$(find gbm_pkg)/logs/mission_logs.txt"/>
   
-  <remap from="closest_node" to="X1/node_skeleton/closest_node"/>
-  <remap from="edge_list" to="X1/node_skeleton/edge_list"/>
-  <remap from="odometry" to="X1/odometry"/>
+  <remap from="closest_node" to="node_skeleton/closest_node"/>
+  <remap from="edge_list" to="node_skeleton/edge_list"/>
+  <remap from="odometry" to="/husky_odom"/>
   <remap from="dead_end_flag" to="dead_end_flag"/>
   
   </node>

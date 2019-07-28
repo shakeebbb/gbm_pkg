@@ -53,6 +53,7 @@ vector<float> currentEdgeAngles;
 vector<int> updateNodeIds;
 float pi = 3.14159;
 bool currentDeadEndFlag = false;
+bool do_plotting = false;
 
 ofstream logFile;
 
@@ -181,11 +182,12 @@ ros::spinOnce();
 							cout << xt[1] << "," << yt[1] << endl;
 
 							cout << "Updating Node Id : " << i << endl;
-							plt::plot(xt,yt);
-							
-							plt::xlim(0, 100);
-							plt::ylim(-150, 150);
-							plt::pause(0.1);
+							if(do_plotting){
+							    plt::plot(xt,yt);
+							    plt::xlim(0, 100);
+							    plt::ylim(-150, 150);
+							    plt::pause(0.1);
+							}
 						}
 						
 						for (int j = 0; j < currentAdj[i][0].exploredEdgeAngles.size(); j++)
@@ -199,10 +201,10 @@ ros::spinOnce();
 							
 						ut.push_back(cos(currentAdj[i][0].exploredEdgeAngles[j]));
 						vt.push_back(sin(currentAdj[i][0].exploredEdgeAngles[j]));
-
-						plt::quiver(xt,yt,ut,vt);
-						plt::pause(0.1);
-						
+						if (do_plotting){
+						    plt::quiver(xt,yt,ut,vt);
+						    plt::pause(0.1);
+						}
 						}
 					}
 				updateNodeIds.clear();
@@ -216,9 +218,10 @@ ros::spinOnce();
 				xt.push_back(currentAdj[currentNodeId][0].position.x);
 				yt.push_back(currentAdj[currentNodeId][0].position.y);
 
-				plt::scatter(xt, yt, 15);
-
-				plt::pause(0.1);
+				if(do_plotting){
+				    plt::scatter(xt, yt, 15);
+				    plt::pause(0.1);
+				}
 			}
   ros::spinOnce();
 	}

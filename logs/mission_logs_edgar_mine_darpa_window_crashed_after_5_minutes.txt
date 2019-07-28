@@ -1,0 +1,3287 @@
+Thu Jul 25 17:20:46 2019
+
+Parameters List
+sRadius = 1.5
+rRadius = 3
+eRadius = 0.7
+dRadius = 0.25
+logFilePath = /home/ohrad/catkin_ws/src/gbm_pkg/logs/mission_logs.txt
+Node Added
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 1
+updateAngleLeft = 1
+currentNode Position = (0,0)
+Robot's Position = (-1.21438e+06,-13187.3)
+Distance of the robot's location from the currentNode = 1.21445e+06
+-------------------------------------------------------------
+| ID:0 - Position:(0 , 0) - Neighbours' Positions: - Explored Edge Angles:[-1.31266] |
+
+
+---------------------------------------------------------
+Checking if all the unexplored edges (copied to AllEdgeAngles) are explored, if not adding them to the unexplored edges
+-------------------------------------------------------------
+| ID:0 - Position:(0 , 0) - Neighbours' Positions: - Explored Edge Angles:[-1.31266] |
+
+
+---------------------------------------------------------
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
+---------
+Edge Angles Callback Called
+Edges Array Size = 0 : at_a_junction = 0 currentNNodes = 1 currentNodeId = 0 updateAngleLeft = 0
+updateAngleLeft = 0
