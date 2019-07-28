@@ -718,7 +718,26 @@ void updateUnexploredEdgeAngles(int nodeId, bool updateFind, vector<float> AllEd
 
 int checkLastEdgeExistence(int nodeId)
 {
+	logFile << "Checking last edge existence in the previous entries" << endl;
+	
 	float edgeAngle = currentAdj[nodeId][0].exploredEdgeAngles.back();
+	currentAdj[nodeId][0].exploredEdgeAngles.pop_back();
+	
+	int closestEdgeId;
+	if(checkEdgeExistence(currentAdj[nodeId][0].exploredEdgeAngles, edgeAngle, eRadius, closestEdgeId))
+	{
+		currentAdj[nodeId][0].exploredEdgeAngles.push_back(edgeAngle);
+		logFile << "Found at vector Index: " << closestEdgeId << " corresponding to the neighbor node ID: " << currentAdj[nodeId][closestEdgeId+1].id << endl;
+		return currentAdj[nodeId][closestEdgeId+1].id;
+	}
+	else
+	{
+		logFile << "Last edge not found in previous entries" << endl;
+		currentAdj[nodeId][0].exploredEdgeAngles.push_back(edgeAngle);
+		return -1;
+	}
+/*	
+	
 	for (int i = 0; i < (currentAdj[nodeId][0].exploredEdgeAngles.size()-1); i++)
 	{
 		logFile << "Comparing last exploredEdgeAngle = " << edgeAngle  << " with existing exploredEdgeAngle = " << currentAdj[nodeId][0].exploredEdgeAngles[i] << endl;
@@ -727,6 +746,7 @@ int checkLastEdgeExistence(int nodeId)
 		return currentAdj[nodeId][i+1].id;
 	}
 	return -1;
+*/
 }
 
 float distance(node& node1, node& node2)
