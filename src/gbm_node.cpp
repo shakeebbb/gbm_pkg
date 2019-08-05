@@ -285,7 +285,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 		bool nodeExists = checkNodeExistence(tempNode, closestNodeId);
 		//bool edgeExists = checkLastEdgeExistence(currentNodeId, currentAdj[currentNodeId][0].exploredEdgeAngles.back());
 	
-			if(!nodeExists) // If node and edge don't exist
+			if(!nodeExists && !updateAngleLeft) // If node and edge don't exist and the robot has traversed an edge
 			{
 			
 			logFile << "Node Doesn't Exist !!!" << endl;
