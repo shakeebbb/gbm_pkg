@@ -53,7 +53,7 @@ vector<float> currentEdgeAngles;
 vector<int> updateNodeIds;
 float pi = 3.14159;
 bool currentDeadEndFlag = false;
-bool do_plotting = false;
+bool do_plotting = true;
 
 ofstream logFile;
 
@@ -69,6 +69,7 @@ void updateUnexploredEdgeAngles(int, bool, vector<float>);
 int checkLastEdgeExistence(int);
 bool checkNodeExistence(node&, int&);
 bool checkEdgeExistence (vector<float>, float, float, int&);
+float calculateAngleFromPoint(point, point);
 float distance(node&, node&);
 void addNode(node);
 void printAdj();
@@ -396,7 +397,9 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 		logFile << "Robot's Position = (" << tempNode.position.x << "," << tempNode.position.y << ")" << endl;
 		logFile << "Distance of the robot's location from the currentNode = " << distance(currentAdj[currentNodeId][0], tempNode) << endl;
 		
-		currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentHeading);
+		currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(
+		atan2(tempNode.position.y-currentAdj[currentNodeId][0].position.y, tempNode.position.x-currentAdj[currentNodeId][0].position.x));
+		//currentAdj[currentNodeId][0].exploredEdgeAngles.push_back(currentHeading);
 		//updateNodeIds.push_back(currentNodeId);
 		
 		updateUnexploredEdgeAngles(currentNodeId, true, {});
@@ -423,6 +426,52 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 		*/
 		
 		publishGraph();
+}
+
+float calculateAngleFromPoint(point point1, point point2) // Calculate angle of line through point1 and point2 with origin at point1
+{
+	logFile << "Origin Point (" << point1.x << "," << point1.y << ")" << " - Robot Point (" << point2.x << "," << point2.y << ")" << endl;
+	// Bringing origin to (0,0)
+	point2.x = point2.x - point1.x;
+	point2.y = point2.y - point1.y;
+	
+	if(point2.x > 0)
+	{
+	logFile << "Positive x-axis quadrants" << endl;
+	logFile << "atan: " << atan(point1.y/point1.x) << endl;
+	return atan(point1.y/point1.x);
+	}
+	
+	if(point2.x < 0 && point2.y < 0)
+	{
+	logFile << "Negative x-axis and negative y-axis quadrant" << endl;
+	logFile << "atan: " << atan(point1.y/point1.x) << endl;
+	return (-pi+atan(point1.y/point1.x));
+	}
+	
+	if(point2.x < 0 && point2.y >= 0)
+	{
+	logFile << "Negative x-axis and positive y-axis quadrant and positive y-axis" << endl;
+	logFile << "atan: " << atan(point1.y/point1.x) << endl;
+	return (pi-abs(atan(point1.y/point1.x)));
+	}
+	
+	if(point2.y > 0 && point2.x == 0)
+	{
+	logFile << "Positive y-axis quadrant and x-axis" << endl;
+	logFile << "atan: " << atan(point1.y/point1.x) << endl;
+	return (pi/2);
+	}
+	
+	if(point2.y < 0 && point2.x == 0)
+	{
+	logFile << "Negative y-axis quadrant and x-axis" << endl;
+	logFile << "atan: " << atan(point1.y/point1.x) << endl;
+	return (-pi/2);
+	}
+	
+	logFile << "Something is wrong with the calculateAngleFromPoint function" << endl;
+	return 0;
 }
 
 void publishGraph()
