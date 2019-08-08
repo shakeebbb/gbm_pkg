@@ -9,7 +9,7 @@
   
   <remap from="closest_node" to="node_skeleton/closest_node"/>
   <remap from="edge_list" to="node_skeleton/edge_list"/>
-  <remap from="odometry" to="/husky_odom"/>
+  <remap from="odometry" to="odometry"/>
   <remap from="dead_end_flag" to="dead_end_flag"/>
   
   </node>

@@ -53,7 +53,7 @@ vector<float> currentEdgeAngles;
 vector<int> updateNodeIds;
 float pi = 3.14159;
 bool currentDeadEndFlag = false;
-bool do_plotting = true;
+bool do_plotting = false;
 
 ofstream logFile;
 
@@ -266,7 +266,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 	 for(int i = 0; i < msg.layout.dim[0].size; i++)
 	 currentEdgeAngles.push_back(msg.data[i]);
 	
-	bool at_a_junction = (msg.layout.dim[0].size > 2) && pow(currentPosition.x - currentLocation.x, 2) + pow(currentPosition.y - currentLocation.y, 2) < pow(sRadius, 2);
+	bool at_a_junction = (msg.layout.dim[0].size > 2) && pow(currentPosition.x - currentLocation.x, 2) + pow(currentPosition.y - currentLocation.y, 2) < pow(sRadius, 2) && !updateAngleLeft;
 	
 	logFile << "Edges Array Size = " << msg.layout.dim[0].size << " : " << "at_a_junction = " << at_a_junction << " currentNNodes = " << currentNNodes << " currentNodeId = "<< currentNodeId 
 			 << " updateAngleLeft = " << updateAngleLeft << endl;
@@ -286,7 +286,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 		bool nodeExists = checkNodeExistence(tempNode, closestNodeId);
 		//bool edgeExists = checkLastEdgeExistence(currentNodeId, currentAdj[currentNodeId][0].exploredEdgeAngles.back());
 	
-			if(!nodeExists && !updateAngleLeft) // If node and edge don't exist and the robot has traversed an edge
+			if(!nodeExists) // If node and edge don't exist and the robot has traversed an edge
 			{
 			
 			logFile << "Node Doesn't Exist !!!" << endl;
@@ -341,7 +341,7 @@ void edgeAnglesCb(const std_msgs::Float32MultiArray& msg)
 			
 			updateAngleLeft = true;
 			}
-			else if(currentNodeId == closestNodeId && !updateAngleLeft) // If the robot is at the same node after it left the node //******************
+			else if(currentNodeId == closestNodeId) // If the robot is at the same node after it left the node //******************
 			{
 				
 			logFile << "Robot Came Back to the Same Node !!!" << endl;
